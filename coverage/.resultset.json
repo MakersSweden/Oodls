@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/claudiadonovan/Code/projects/oodls/config/environment.rb": [
+      "/Users/callisto/Code/oodls/v1/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/application.rb": [
+      "/Users/callisto/Code/oodls/v1/config/application.rb": [
         1,
         null,
         null,
@@ -42,13 +42,13 @@
         null,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/boot.rb": [
+      "/Users/callisto/Code/oodls/v1/config/boot.rb": [
         null,
         1,
         null,
         1
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/environments/test.rb": [
+      "/Users/callisto/Code/oodls/v1/config/environments/test.rb": [
         1,
         null,
         null,
@@ -89,7 +89,7 @@
         null,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/initializers/assets.rb": [
+      "/Users/callisto/Code/oodls/v1/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -106,7 +106,7 @@
         null,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/initializers/backtrace_silencers.rb": [
+      "/Users/callisto/Code/oodls/v1/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -115,12 +115,12 @@
         null,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/initializers/cookies_serializer.rb": [
+      "/Users/callisto/Code/oodls/v1/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/initializers/devise.rb": [
+      "/Users/callisto/Code/oodls/v1/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -383,13 +383,13 @@
         null,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/initializers/filter_parameter_logging.rb": [
+      "/Users/callisto/Code/oodls/v1/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/initializers/inflections.rb": [
+      "/Users/callisto/Code/oodls/v1/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -407,21 +407,21 @@
         null,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/initializers/mime_types.rb": [
+      "/Users/callisto/Code/oodls/v1/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/initializers/paperclip.rb": [
+      "/Users/callisto/Code/oodls/v1/config/initializers/paperclip.rb": [
         1
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/initializers/session_store.rb": [
+      "/Users/callisto/Code/oodls/v1/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/initializers/wrap_parameters.rb": [
+      "/Users/callisto/Code/oodls/v1/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -437,7 +437,7 @@
         null,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/config/routes.rb": [
+      "/Users/callisto/Code/oodls/v1/config/routes.rb": [
         1,
         null,
         1,
@@ -501,7 +501,7 @@
         null,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/app/models/charity.rb": [
+      "/Users/callisto/Code/oodls/v1/app/models/charity.rb": [
         1,
         null,
         null,
@@ -555,7 +555,7 @@
         null,
         null,
         9,
-        32,
+        27,
         null,
         null,
         1,
@@ -565,15 +565,15 @@
         null,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/app/helpers/application_helper.rb": [
+      "/Users/callisto/Code/oodls/v1/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/app/helpers/charities_helper.rb": [
+      "/Users/callisto/Code/oodls/v1/app/helpers/charities_helper.rb": [
         1,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/app/helpers/devise_helper.rb": [
+      "/Users/callisto/Code/oodls/v1/app/helpers/devise_helper.rb": [
         1,
         1,
         20,
@@ -599,24 +599,24 @@
         null,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/app/helpers/home_helper.rb": [
+      "/Users/callisto/Code/oodls/v1/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/app/helpers/homepage_helper.rb": [
+      "/Users/callisto/Code/oodls/v1/app/helpers/homepage_helper.rb": [
         1,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/app/controllers/home_controller.rb": [
+      "/Users/callisto/Code/oodls/v1/app/controllers/home_controller.rb": [
         1,
         null,
         1,
-        32,
+        27,
         null,
         null,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/app/controllers/application_controller.rb": [
+      "/Users/callisto/Code/oodls/v1/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -626,7 +626,7 @@
         1,
         null,
         1,
-        97,
+        92,
         33,
         null,
         null,
@@ -677,7 +677,7 @@
         null,
         null
       ],
-      "/Users/claudiadonovan/Code/projects/oodls/app/controllers/charities_controller.rb": [
+      "/Users/callisto/Code/oodls/v1/app/controllers/charities_controller.rb": [
         1,
         null,
         1,
@@ -707,6 +707,6 @@
         null
       ]
     },
-    "timestamp": 1422645879
+    "timestamp": 1432570489
   }
 }

@@ -156,23 +156,23 @@ feature 'Charities:' do
 
 	end
 
-	context 'getting help and info' do
+	xcontext 'getting help and info' do
 
-		scenario 'should be able to contact site admin', :js => true do
+		xscenario 'should be able to contact site admin', :js => true do
 			visit '/'
 			expect(page).to have_link 'Contact'
 		  click_link('Contact')
 	 		expect(page).to have_content 'team@oodls.io'
 		end
 
-		scenario 'should be able to find out if they qualify', :js => true do
+		xscenario 'should be able to find out if they qualify', :js => true do
 			visit '/'
 			expect(page).to have_link 'Do I Qualify?'
 		  click_link('Do I Qualify?')
 	 		expect(page).to have_content 'The following organisations may sign up to Oodls:'
 		end
 
-		scenario 'should be able to find out more about the site', :js => true do
+		xscenario 'should be able to find out more about the site', :js => true do
 			visit '/'
 			expect(page).to have_link 'About'
 		  click_link('About')

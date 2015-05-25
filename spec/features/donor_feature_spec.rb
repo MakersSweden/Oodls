@@ -24,14 +24,14 @@ feature 'Donors:' do
 			expect(current_url).to eq 'http://www.crisis.org.uk/'
 		end
 
-		scenario 'should be able to find out donation guidelines', :js => true do
+		xscenario 'should be able to find out donation guidelines', :js => true do
 			visit '/'
 			expect(page).to have_link 'Donation Guidelines'
 		  click_link('Donation Guidelines')
 	 		expect(page).to have_content 'Make sure your waste food is suitable for donation:'
 		end
 
-		scenario 'should be able to see if there is more they can do', :js => true do
+		xscenario 'should be able to see if there is more they can do', :js => true do
 			visit '/'
 			expect(page).to have_link 'What more can I do?'
 		  click_link('What more can I do?')
