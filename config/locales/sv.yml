@@ -217,7 +217,24 @@ sv:
       long: "%e %B %Y %H:%M"
       short: "%e %b %H:%M"
     pm: ''
- oodls:
-  add_charity: 'Lägg till mottagare'
+  oodls:
+    ui:
+      i_have_food_to_give: 'Jag har mat att skänka'
+      i_am_a_charity: 'Jag vill ta emot mat'
+      where_to_give: 'Var kan jag ge?'
+      donation_guidlines: 'Riktlinjer'
+      what_mote_can_i_do: 'Hur kan jag bidra?'
+      add_charity: 'Lägg till mottagare'
+      all_charities: 'Alla organisationer'
+      do_i_qualify: 'Är jag kvalificerad?'
+      my_profile: 'Min profil'
+      about: 'Om Oodls'
+      contact_us: 'Kontakta oss'
+    devise-ui:
+      sign_in: "Logga in"
+      sign_out: 'Logga ut'
+      sign_up: "Registrera dig"
+      forgot_password: 'Har du glömt ditt lösenord?'
+      remember_me: 'Kom ihåg mig'
 
 
