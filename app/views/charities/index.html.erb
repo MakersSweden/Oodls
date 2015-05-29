@@ -1,13 +1,13 @@
-<%= render "search" %>
-<%= render "filters" %>
+<%= render 'search' %>
+<%= render 'filters' %>
 
 <div class="row">
   <div class="small-6 columns">
-    <h2>Participating Charities</h2>
+    <h2><%= t('oodls.ui.all_charities') %></h2>
   </div>
   <div class="small-6 columns text-right">
-    <%= link_to "Back", root_path, class: "button small" %>
+    <%= link_to t('oodls.ui.back').humanize, root_path, class: "button small" %>
   </div>
 </div>
 
-<%= render "all_charities_display" %>
+<%= render 'all_charities_display' %>

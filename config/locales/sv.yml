@@ -225,6 +225,9 @@ sv:
       short: "%e %b %H:%M"
     pm: ''
   oodls:
+    info:
+      about: 'Oolds siktar in sig på att vara en del av lösningen av matslöseriet i samhället.'
+      contact: 'Vill du komma i kontakt med oss gör du det enklast på: info@oodls.io'
     ui:
       i_have_food_to_give: 'Jag har mat att skänka'
       i_am_a_charity: 'Jag vill ta emot mat'
@@ -238,6 +241,11 @@ sv:
       about: 'Om Oodls'
       contact_us: 'Kontakta oss'
       decelect_select_all: 'Markera / Avmarkera alla'
+      back: 'tillbaka'
+      search: 'sök'
+      seach_charities: 'Sök efter organisationer'
+      filter: 'filtrera efter mattyp'
+      all_records: 'alla'
       registrations:
         organisation_name: 'Organisation'
         org_description: 'Verksamhetsbeskrivning (max 140 tecken)'
