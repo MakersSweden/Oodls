@@ -249,6 +249,7 @@ sv:
       submit: "Skapa"
       title: "titel"
       description: "beskrivning"
+      visit_the_website: "Besök hemsidan"
       registrations:
         organisation_name: "Organisation"
         org_description: "Verksamhetsbeskrivning (max 140 tecken)"
@@ -277,6 +278,7 @@ sv:
         drinks: "drycker"
         milk: "mjölk"
       donations:
+        all_donations: "Aktuella donationer"
         create_a_donation: "Skapa en donation"
         from_date: "Aktuell from"
         will_deliver: "erbjuder utkörning"

@@ -215,7 +215,9 @@ en:
       description: description
       do_i_qualify: "Am I qualified?"
       donation_guidlines: "Donation Guidelines"
-      donations: 
+      visit_the_website: "Visit the website"
+      donations:
+        all_donations: "Current donations"
         create_a_donation: "Create a donation"
         from_date: "Available from"
         will_deliver: "offer delivery"
