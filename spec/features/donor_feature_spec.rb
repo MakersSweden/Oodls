@@ -41,6 +41,12 @@ feature 'Donors:' do
       expect(page).to have_content 'Coders: want to contribute?'
     end
 
+    scenario 'should be able to create a donation' do
+      visit '/'
+      click_link('Create a donation')
+      expect(page).to have_content 'Create a donation'
+    end
+
   end
 
   context 'filtering search results' do
