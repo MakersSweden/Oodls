@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/thoughtbot/shoulda-matchers
+  revision: c3cc7c9f639ea73eef2dc1eb6fde692e695227d8
+  specs:
+    shoulda-matchers (3.0.0.alpha)
+      activesupport (>= 4.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -228,6 +235,7 @@ DEPENDENCIES
   sass-rails (~> 5.0.1)
   sdoc (~> 0.4.0)
   selenium-webdriver
+  shoulda-matchers!
   spring
   turbolinks
   uglifier (>= 1.3.0)
