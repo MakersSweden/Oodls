@@ -27,7 +27,7 @@ en:
       contact_us: "Contact us"
       decelect_select_all: "Select / Deselect all"
       do_i_qualify: "Am I qualified?"
-      donation_guidlines: "Guidelines"
+      donation_guidlines: "Donation Guidelines"
       filter: "filter by food type"
       food:
         cereals: "Cereals"
@@ -61,5 +61,5 @@ en:
         password_cofirm: "Password Confirmation"
       seach_charities: "Search for organisations"
       search: "Search"
-      what_mote_can_i_do: "How can I help?"
+      what_mote_can_i_do: "What more can I do?"
       where_to_give: "Where to give?"
