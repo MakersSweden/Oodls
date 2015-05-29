@@ -57,9 +57,9 @@
             <% if charity_signed_in? %>
                 <li><%= link_to "My Profile", "/charities/#{@current_charity.id}" %></li>
             <% else %>
-                <li><%= link_to t('add_charity') , new_charity_registration_path %></li>
+                <li><%= link_to t('oodls.add_charity') , new_charity_registration_path %></li>
                 <li><%= link_to "Do I Qualify?", "#", "data-reveal-id" => "qualifications-modal" %></li>
-                <li><%= link_to "Sign In", new_charity_session_path %></li>
+                <li><%= link_to t('devise.sessions.new.sign_in'), new_charity_session_path %></li>
             <% end %>
           </ul>
         </li>

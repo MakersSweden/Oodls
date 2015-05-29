@@ -31,6 +31,8 @@ sv:
       updated: "Ditt lösenord har uppdaterats. Du är nu inloggad."
       updated_not_active: "Ditt lösenord har uppdaterats."
     registrations:
+      new:
+        sign_up: "Registrera dig"
       destroyed: "Ditt konto är nu avregistrerat. Vi hoppas få se dig snart igen."
       signed_up: "Välkommen! Ett nytt konto har skapats."
       signed_up_but_inactive: "Ett nytt konto har skapats. Men vi kunde tyvärr inte logga in dig eftersom ditt konto inte är aktiverat."
@@ -39,6 +41,8 @@ sv:
       update_needs_confirmation: "Ditt konto har uppdaterats, men vi behöver bekräfta din epostadress. En bekräftelse har skickats till din nya epostadress."
       updated: "Ditt konto har uppdaterats."
     sessions:
+      new:
+        sign_in: "Logga in"
       signed_in: "Du är inloggad."
       signed_out: "Du är utloggad."
       already_signed_out: "Du är utloggad."
