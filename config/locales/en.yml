@@ -31,7 +31,7 @@ en:
       filter: "filter by food type"
       food:
         cereals: "cereals"
-        coffee_tea: "Coffe & Tea"
+        coffee_tea: "Coffee & Tea"
         condiments: "condiments"
         cooking_ingreadients: "cooking ingreadiants"
         dried_foods: "dried foods"
