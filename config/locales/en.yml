@@ -1,23 +1,65 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
+---
 en:
-  hello: "Hello world"
+  date:
+    weekdays: 'weekdays'
+    weekends: 'weekends'
+  elements:
+    address: 'Address'
+    email: 'Email'
+    phone: 'Phone'
+    postcode: "Post number"
+  oodls:
+    devise-ui:
+      forgot_password: "Did you forget your password?"
+      remember_me: "Remember me"
+      sign_in: "Log in"
+      sign_out: "Log out"
+      sign_up: "Register your organisation"
+    info:
+      about: "Oolds siktar in sig på att vara en del av lösningen av matslöseriet i samhället."
+      contact: "Vill du komma i kontakt med oss gör du det enklast på: info@oodls.io"
+    ui:
+      about: "About Oodls"
+      add_charity: "Add a organisation"
+      all_charities: "All organisations"
+      all_records: "all"
+      back: "back"
+      contact_us: "Contact us"
+      decelect_select_all: "Select / Deselect all"
+      do_i_qualify: "Am I qualified?"
+      donation_guidlines: "Guidelines"
+      filter: "filter by food type"
+      food:
+        cereals: "cereals"
+        coffee_tea: "Coffee & Tea"
+        condiments: "condiments"
+        cooking_ingreadients: "cooking ingreadiants"
+        dried_foods: "dried foods"
+        drinks: "drinks"
+        fruit_veg: "fruit & veggies"
+        meet_fish: "meat & fish"
+        milk: "milk"
+        snacks: "snacks"
+        tins: "Tins"
+      i_am_a_charity: "I am a charity"
+      i_have_food_to_give: "I have food to give"
+      my_profile: "My profile"
+      operations:
+        what_food_do_you_accept: "What food dou you accept?"
+      registrations:
+        characters_minimum: "characters minimum"
+        open_for_donations: "Open for donations:"
+        org_contact_header: "Contact information"
+        org_description: "Description (max 140 characters)"
+        org_donation_center_address: "Donation center\'s address"
+        org_logo: "Charity logo"
+        org_person: "Contact person"
+        org_person_email: "Contact person\'s email"
+        org_url: "Website"
+        organisation_name: "Organisation"
+        password: "Password"
+        password_cofirm: "Password confirmation"
+      seach_charities: "Search for organisations"
+      search: "search"
+      what_mote_can_i_do: "How can I help?"
+      where_to_give: "Where to give?"

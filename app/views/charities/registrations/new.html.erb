@@ -1,6 +1,6 @@
 <div class="row">
   <div class="small-12 columns">
-    <h2>Sign Up</h2>
+    <h2><%= t('oodls.devise-ui.sign_up') %></h2>
   </div>
 </div>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -11,25 +11,25 @@
   </div>
   <div class ="row">
     <div class="small-4 columns">
-      <p>Organisation Name &#42;</p>
+      <p><%= t('oodls.ui.registrations.organisation_name') %> &#42;</p>
     </div>
     <div class="small-8 columns">
-      <%= f.text_field :organisation, autofocus: true, placeholder: "Organisation Name" %>
+      <%= f.text_field :organisation, autofocus: true, placeholder: t('oodls.ui.registrations.organisation_name') %>
     </div>
   </div>
   <div class ="row">
   <div class="small-12 columns">
-    <%= f.text_field :description, placeholder: "Organisation Description (max 140 characters)" %>
+    <%= f.text_field :description, placeholder: t('oodls.ui.registrations.org_description') %>
     </div>
   </div>
   <div class ="row">
     <div class="small-12 columns">
-      <%= f.text_field :website_url, placeholder: "Website Address" %>
+      <%= f.text_field :website_url, placeholder: t('oodls.ui.registrations.org_url') %>
     </div>
   </div>
   <div class ="row">
     <div class="small-12 columns">
-      <h4>Charity Logo</h4>
+      <h4><%= t('oodls.ui.registrations.org_logo') %></h4>
     </div>
   </div>
   <div class ="row">
@@ -39,65 +39,65 @@
   </div>
   <div class ="row">
     <div class="small-12 columns">
-      <h4>Contact Details</h4>
+      <h4><%= t('oodls.ui.registrations.org_contact_header') %></h4>
     </div>
   </div>
   <div class ="row">
     <div class="small-4 columns">
-      <p>Contact Name</p>
+      <p><%= t('oodls.ui.registrations.org_person') %></p>
     </div>
     <div class="small-8 columns">
-      <%= f.text_field :contact_name, placeholder: "Contact Name" %>
+      <%= f.text_field :contact_name, placeholder: t('oodls.ui.registrations.org_person') %>
     </div>
   </div>
   <div class ="row">
     <div class="small-4 columns">
-      <p>Email &#42;</p>
+      <p><%= t('elements.email') %> &#42;</p>
     </div>
     <div class="small-8 columns">
-      <%= f.email_field :email, placeholder: "Contact\'s Email Address" %>
+      <%= f.email_field :email, placeholder: t('oodls.ui.registrations.org_person_email') %>
     </div>
   </div>
   <div class ="row">
     <div class="small-4 columns">
-      <p>Address &#42;</p>
+      <p><%= t('elements.address') %> &#42;</p>
     </div>
     <div class="small-8 columns">
-      <%= f.text_field :full_address, placeholder: "Donation Center Address" %>
+      <%= f.text_field :full_address, placeholder: t('oodls.ui.registrations.org_donation_center_address') %>
     </div>
   </div>
   <div class ="row">
     <div class="small-4 columns">
-      <p>Postcode &#42;</p>
+      <p><%= t('elements.postcode') %> &#42;</p>
     </div>
     <div class="small-8 columns">
-      <%= f.text_field :postcode, placeholder: "Postcode" %>
+      <%= f.text_field :postcode, placeholder: t('elements.address') %>
     </div>
   </div>
   <div class ="row">
     <div class="small-12 columns">
-      <h4>What Food You Accept</h4>
+      <h4><%= t('oodls.ui.operations.what_food_do_you_accept') %></h4>
     </div>
     <div class="small-12 columns">
       <div class="row">
         <div class="switch small small-3 columns">
           <%= f.check_box(:tins) %>
-          <%= f.label(:tins, "Tins") %>
+          <%= f.label(:tins, t('oodls.ui.food.tins')) %>
         </div>
         <div class="small-5 columns">
-          <p>Tins</p>
+          <p><%= t('oodls.ui.food.tins').humanize %></p>
         </div>
         <div class="small-4 columns">
-          <%= image_tag "icons/tins.svg", size: "30x30"%>
+          <%= image_tag 'icons/tins.svg', size: '30x30'%>
         </div>
       </div>
       <div class="row">
         <div class="switch small small-3 columns">
           <%= f.check_box(:dried_goods) %>
-          <%= f.label(:dried_goods, "Dried Goods") %>
+          <%= f.label(:dried_goods, t('oodls.ui.food.dried_foods')) %>
         </div>
         <div class="small-5 columns">
-          <p>Dried Goods</p>
+          <p><%= t('oodls.ui.food.dried_foods').humanize %></p>
         </div>
         <div class="small-4 columns">
           <%= image_tag "icons/dried_goods.svg", size: "30x30"%>
@@ -106,10 +106,10 @@
       <div class="row">
         <div class="switch small small-3 columns">
           <%= f.check_box(:coffee_and_tea) %>
-          <%= f.label(:coffee_and_tea, "Coffee & Tea") %>
+          <%= f.label(:coffee_and_tea, t('oodls.ui.food.coffee_tea')) %>
         </div>
         <div class="small-5 columns">
-          <p>Coffee &amp; Tea</p>
+          <p><%= t('oodls.ui.food.coffee_tea').humanize %></p>
         </div>
         <div class="small-4 columns">
           <%= image_tag "icons/coffee_and_tea.svg", size: "30x30"%>
@@ -118,10 +118,10 @@
       <div class="row">
         <div class="switch small small-3 columns">
           <%= f.check_box(:fresh_fruit_and_veg) %>
-          <%= f.label(:fresh_fruit_and_veg, "Fruit & Veg") %>
+          <%= f.label(:fresh_fruit_and_veg, t('oodls.ui.food.fruit_veg')) %>
         </div>
         <div class="small-5 columns">
-          <p>Fresh Fruit &amp; Vegetables</p>
+          <p><%= t('oodls.ui.food.fruit_veg').humanize %></p>
         </div>
         <div class="small-4 columns">
           <%= image_tag "icons/fresh_fruit_and_veg.svg", size: "30x30"%>
@@ -130,10 +130,10 @@
       <div class="row">
         <div class="switch small small-3 columns">
           <%= f.check_box(:fresh_meat_and_fish) %>
-          <%= f.label(:fresh_meat_and_fish, "Meat & Fish") %>
+          <%= f.label(:fresh_meat_and_fish, t('oodls.ui.food.meet_fish')) %>
         </div>
         <div class="small-5 columns">
-          <p>Fresh Meat &amp; Fish</p>
+          <p><%= t('oodls.ui.food.meet_fish').humanize %></p>
         </div>
         <div class="small-4 columns">
           <%= image_tag "icons/fresh_meat_and_fish.svg", size: "30x30"%>
@@ -142,10 +142,10 @@
       <div class="row">
         <div class="switch small small-3 columns">
           <%= f.check_box(:snacks) %>
-          <%= f.label(:snacks, "Snacks") %>
+          <%= f.label(:snacks, t('oodls.ui.food.snacks')) %>
         </div>
         <div class="small-5 columns">
-          <p>Snacks</p>
+          <p><%= t('oodls.ui.food.snacks').humanize %></p>
         </div>
         <div class="small-4 columns">
           <%= image_tag "icons/snacks.svg", size: "30x30"%>
@@ -154,10 +154,10 @@
       <div class="row">
         <div class="switch small small-3 columns">
           <%= f.check_box(:jars_and_condiments) %>
-          <%= f.label(:jars_and_condiments, "Condiments") %>
+          <%= f.label(:jars_and_condiments, t('oodls.ui.food.condiments')) %>
         </div>
         <div class="small-5 columns">
-          <p>Jars &amp; Condiments</p>
+          <p><%= t('oodls.ui.food.condiments').humanize %></p>
         </div>
         <div class="small-4 columns">
           <%= image_tag "icons/jars_and_condiments.svg", size: "30x30"%>
@@ -166,10 +166,10 @@
       <div class="row">
         <div class="switch small small-3 columns">
           <%= f.check_box(:cereals) %>
-          <%= f.label(:cereals, "Cereals") %>
+          <%= f.label(:cereals, t('oodls.ui.food.cereals')) %>
         </div>
         <div class="small-5 columns">
-          <p>Cereals</p>
+          <p><%= t('oodls.ui.food.cereals').humanize %></p>
         </div>
         <div class="small-4 columns">
           <%= image_tag "icons/cereals.svg", size: "30x30"%>
@@ -178,10 +178,10 @@
       <div class="row">
         <div class="switch small small-3 columns">
           <%= f.check_box(:cooking_ingredients) %>
-          <%= f.label(:cooking_ingredients, "Cooking Ingredients") %>
+          <%= f.label(:cooking_ingredients, t('oodls.ui.food.cooking_ingreadients')) %>
         </div>
         <div class="small-5 columns">
-          <p>Cooking Ingredients</p>
+          <p><%= t('oodls.ui.food.cooking_ingreadients').humanize %></p>
         </div>
         <div class="small-4 columns">
           <%= image_tag "icons/cooking_ingredients.svg", size: "30x30"%>
@@ -190,10 +190,10 @@
       <div class="row">
         <div class="switch small small-3 columns">
           <%= f.check_box(:drinks) %>
-          <%= f.label(:drinks, "Drinks") %>
+          <%= f.label(:drinks, t('oodls.ui.food.drinks')) %>
         </div>
         <div class="small-5 columns">
-          <p>Drinks</p>
+          <p><%= t('oodls.ui.food.drinks').humanize %></p>
         </div>
         <div class="small-4 columns">
           <%= image_tag "icons/drinks.svg", size: "30x30"%>
@@ -202,63 +202,64 @@
       <div class="row">
         <div class="switch small small-3 columns">
           <%= f.check_box(:uht_milk) %>
-          <%= f.label(:uht_milk, "UHT Milk") %>
+          <%= f.label(:uht_milk, t('oodls.ui.food.milk')) %>
         </div>
         <div class="small-5 columns">
-          <p>UHT Milk</p>
+          <p><%= t('oodls.ui.food.milk').humanize %></p>
         </div>
         <div class="small-4 columns">
           <%= image_tag "icons/uht_milk.svg", size: "30x30"%>
         </div>
       </div>
       <div class="row">
+        <hr/>
         <div class="switch small small-3 columns">
           <input type="checkbox" id="selectAll" value="selectAll">
           <label for="selectAll">Select / Deselect All</label>
         </div>
         <div class="small-9 columns">
-          <p>Deselect / Select All</p>
+          <p><%= t('oodls.ui.decelect_select_all') %></p>
         </div>
       </div>
     </div>
   </div>
   <div class ="row">
     <div class="small-12 columns">
-      <h4>Open For Donation</h4>
+      <h4><%= t('oodls.ui.registrations.open_for_donations') %></h4>
     </div>
     <div class="small-12 columns">
-      <%= f.text_field :weekday_opening_hours, placeholder: "Weekdays" %>
+      <%= f.text_field :weekday_opening_hours, placeholder: t('date.weekdays').humanize %>
     </div>
     <div class="small-12 columns">
-      <%= f.text_field :weekend_opening_hours, placeholder: "Weekends" %>
+      <%= f.text_field :weekend_opening_hours, placeholder: t('date.weekends').humanize %>
     </div>
   </div>
   <div class ="row">
     <div class="small-12 columns">
-      <h4>Password</h4>
+      <h4><%= t('oodls.ui.registrations.password') %></h4>
       <% if @validatable %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <em><%= [@minimum_password_length, t('oodls.ui.registrations.characters_minimum')].join(' ') %></em>
       <% end %>
     </div>
   </div>
   <div class ="row">
     <div class="small-12 columns">
-        <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+        <%= f.password_field :password, autocomplete: "off", placeholder: t('oodls.ui.registrations.password') %>
     </div>
   </div>
   <div class ="row">
     <div class="small-12 columns">
-      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password Confirmation" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: t('oodls.ui.registrations.password_cofirm') %>
     </div>
   </div>
   <div class ="row">
     <div class="small-12 columns">
-      <%= f.submit "Sign Up", class: "button small" %>
+      <%= f.submit t('oodls.devise-ui.sign_up'), class: "button small" %>
     </div>
   </div>
 <% end %>
 <div class ="row">
   <div class="small-12 columns">
-    <%= render "charities/shared/links" %>
+    <%= render 'charities/shared/links' %>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <div class="row">
   <div class="small-12 columns">
-    <h2>Log in</h2>
+    <h2><%= t('oodls.devise-ui.sign_in') %></h2>
   </div>
 </div>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -27,20 +27,20 @@
         </div>
       </div>
       <div class="small-11 columns">
-        <p>Remember me?</p>
+        <p><%= t('oodls.devise-ui.remember_me') %></p>
       </div>
     </div>
   <% end -%>
   <div class="row">
     <div class="small-12 columns">
       <div class="actions">
-        <%= f.submit "Log in", class: "small button" %>
+        <%= f.submit t('oodls.devise-ui.sign_in'), class: "small button" %>
       </div>
     </div>
   </div>
 <% end %>
 <div class="row">
   <div class="small-12 columns">
-    <%= render "charities/shared/links" %>
+    <%= render 'charities/shared/links' %>
   </div>
 </div>
