@@ -28,9 +28,11 @@
 # Netbeans project directory
 /nbproject/
 
+
 # RubyMine project files
 .idea
 /.idea/*
+.idea/*
 
 # Textmate project files
 /*.tmproj

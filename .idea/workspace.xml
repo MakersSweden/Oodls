@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="378c243f-b851-4996-bfba-82fb4b835d23" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout-partials/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layout-partials/_header.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/charities/shared/_links.html.erb" afterPath="$PROJECT_DIR$/app/views/charities/shared/_links.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/devise.sv.yml" afterPath="$PROJECT_DIR$/config/locales/devise.sv.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/charities/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/charities/sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/charities/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/charities/registrations/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/charities/unlocks/new.html.erb" afterPath="$PROJECT_DIR$/app/views/charities/unlocks/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/sv.yml" afterPath="$PROJECT_DIR$/config/locales/sv.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Oodls.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +29,7 @@
     <favorites_list name="Oodls" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45049885">
+    <splitter split-orientation="horizontal" split-proportion="0.5371079">
       <split-first>
         <leaf>
           <file leaf-file-name="charity.rb" pinned="false" current-in-tab="false">
@@ -52,10 +52,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_header.html.erb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="_header.html.erb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/layout-partials/_header.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.8265896">
+                <state vertical-scroll-proportion="-26.333334">
                   <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
                   <folding>
                     <element signature="n#t('oodls.ui.i_have_food_to_give')#0;n#!!top" expanded="true" />
@@ -71,6 +71,73 @@
                     <element signature="e#5301#5320#0#ruby" expanded="true" />
                     <element signature="e#5393#5417#0#ruby" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/charities/registrations/new.html.erb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-17.583334">
+                  <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+                  <folding>
+                    <element signature="n#t('oodls.devise-ui.sign_up')#0;n#!!top" expanded="true" />
+                    <element signature="e#386#431#0#ruby" expanded="true" />
+                    <element signature="e#558#603#0#ruby" expanded="true" />
+                    <element signature="e#729#772#0#ruby" expanded="true" />
+                    <element signature="e#902#937#0#ruby" expanded="true" />
+                    <element signature="e#1031#1067#0#ruby" expanded="true" />
+                    <element signature="e#1274#1320#0#ruby" expanded="true" />
+                    <element signature="e#1417#1455#0#ruby" expanded="true" />
+                    <element signature="e#1559#1597#0#ruby" expanded="true" />
+                    <element signature="e#1689#1708#0#ruby" expanded="true" />
+                    <element signature="e#1812#1856#0#ruby" expanded="true" />
+                    <element signature="e#1948#1969#0#ruby" expanded="true" />
+                    <element signature="e#2079#2134#0#ruby" expanded="true" />
+                    <element signature="e#2354#2375#0#ruby" expanded="true" />
+                    <element signature="e#2469#2517#0#ruby" expanded="true" />
+                    <element signature="e#2712#2735#0#ruby" expanded="true" />
+                    <element signature="e#2810#2833#0#ruby" expanded="true" />
+                    <element signature="e#3143#3173#0#ruby" expanded="true" />
+                    <element signature="e#3248#3278#0#ruby" expanded="true" />
+                    <element signature="e#3601#3630#0#ruby" expanded="true" />
+                    <element signature="e#3705#3734#0#ruby" expanded="true" />
+                    <element signature="e#4070#4098#0#ruby" expanded="true" />
+                    <element signature="e#4173#4201#0#ruby" expanded="true" />
+                    <element signature="e#4542#4570#0#ruby" expanded="true" />
+                    <element signature="e#4645#4673#0#ruby" expanded="true" />
+                    <element signature="e#4988#5013#0#ruby" expanded="true" />
+                    <element signature="e#5088#5113#0#ruby" expanded="true" />
+                    <element signature="e#5441#5470#0#ruby" expanded="true" />
+                    <element signature="e#5545#5574#0#ruby" expanded="true" />
+                    <element signature="e#5891#5917#0#ruby" expanded="true" />
+                    <element signature="e#5992#6018#0#ruby" expanded="true" />
+                    <element signature="e#6347#6386#0#ruby" expanded="true" />
+                    <element signature="e#6461#6500#0#ruby" expanded="true" />
+                    <element signature="e#6815#6840#0#ruby" expanded="true" />
+                    <element signature="e#6915#6940#0#ruby" expanded="true" />
+                    <element signature="e#7246#7269#0#ruby" expanded="true" />
+                    <element signature="e#7344#7367#0#ruby" expanded="true" />
+                    <element signature="e#7816#7849#0#ruby" expanded="true" />
+                    <element signature="e#7975#8021#0#ruby" expanded="true" />
+                    <element signature="e#8136#8154#0#ruby" expanded="true" />
+                    <element signature="e#8273#8291#0#ruby" expanded="true" />
+                    <element signature="e#8394#8430#0#ruby" expanded="true" />
+                    <element signature="e#8508#8554#0#ruby" expanded="true" />
+                    <element signature="e#8740#8776#0#ruby" expanded="true" />
+                    <element signature="e#8941#8984#0#ruby" expanded="true" />
+                    <element signature="e#9083#9111#0#ruby" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.6960926">
+                  <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -158,8 +225,8 @@
           <file leaf-file-name="sv.yml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/config/locales/sv.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.93715084">
-                  <caret line="240" column="0" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.64385474">
+                  <caret line="252" column="45" selection-start-line="252" selection-start-column="45" selection-end-line="252" selection-end-column="45" />
                   <folding />
                 </state>
               </provider>
@@ -186,7 +253,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/models/charity.rb" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/config/application.rb" />
@@ -194,7 +260,10 @@
         <option value="$PROJECT_DIR$/app/views/charities/shared/_links.html.erb" />
         <option value="$PROJECT_DIR$/app/views/charities/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layout-partials/_header.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/charities/unlocks/new.html.erb" />
         <option value="$PROJECT_DIR$/config/locales/sv.yml" />
+        <option value="$PROJECT_DIR$/app/views/charities/registrations/new.html.erb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -249,6 +318,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Oodls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oodls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oodls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -346,7 +429,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="unlocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oodls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oodls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="shared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oodls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oodls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="registrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -656,7 +791,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06795422" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29899856" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -691,14 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.95658463">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -805,17 +932,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/sv.yml">
+    <entry file="file://$PROJECT_DIR$/app/views/charities/unlocks/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93715084">
-          <caret line="240" column="0" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3468208">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layout-partials/_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8265896">
+        <state vertical-scroll-proportion="-26.333334">
           <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
           <folding>
             <element signature="n#t('oodls.ui.i_have_food_to_give')#0;n#!!top" expanded="true" />
@@ -831,6 +958,93 @@
             <element signature="e#5301#5320#0#ruby" expanded="true" />
             <element signature="e#5393#5417#0#ruby" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/sv.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64385474">
+          <caret line="252" column="45" selection-start-line="252" selection-start-column="45" selection-end-line="252" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/charities/_charity_profile.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/charities/registrations/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.583334">
+          <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+          <folding>
+            <element signature="n#t('oodls.devise-ui.sign_up')#0;n#!!top" expanded="true" />
+            <element signature="e#386#431#0#ruby" expanded="true" />
+            <element signature="e#558#603#0#ruby" expanded="true" />
+            <element signature="e#729#772#0#ruby" expanded="true" />
+            <element signature="e#902#937#0#ruby" expanded="true" />
+            <element signature="e#1031#1067#0#ruby" expanded="true" />
+            <element signature="e#1274#1320#0#ruby" expanded="true" />
+            <element signature="e#1417#1455#0#ruby" expanded="true" />
+            <element signature="e#1559#1597#0#ruby" expanded="true" />
+            <element signature="e#1689#1708#0#ruby" expanded="true" />
+            <element signature="e#1812#1856#0#ruby" expanded="true" />
+            <element signature="e#1948#1969#0#ruby" expanded="true" />
+            <element signature="e#2079#2134#0#ruby" expanded="true" />
+            <element signature="e#2354#2375#0#ruby" expanded="true" />
+            <element signature="e#2469#2517#0#ruby" expanded="true" />
+            <element signature="e#2712#2735#0#ruby" expanded="true" />
+            <element signature="e#2810#2833#0#ruby" expanded="true" />
+            <element signature="e#3143#3173#0#ruby" expanded="true" />
+            <element signature="e#3248#3278#0#ruby" expanded="true" />
+            <element signature="e#3601#3630#0#ruby" expanded="true" />
+            <element signature="e#3705#3734#0#ruby" expanded="true" />
+            <element signature="e#4070#4098#0#ruby" expanded="true" />
+            <element signature="e#4173#4201#0#ruby" expanded="true" />
+            <element signature="e#4542#4570#0#ruby" expanded="true" />
+            <element signature="e#4645#4673#0#ruby" expanded="true" />
+            <element signature="e#4988#5013#0#ruby" expanded="true" />
+            <element signature="e#5088#5113#0#ruby" expanded="true" />
+            <element signature="e#5441#5470#0#ruby" expanded="true" />
+            <element signature="e#5545#5574#0#ruby" expanded="true" />
+            <element signature="e#5891#5917#0#ruby" expanded="true" />
+            <element signature="e#5992#6018#0#ruby" expanded="true" />
+            <element signature="e#6347#6386#0#ruby" expanded="true" />
+            <element signature="e#6461#6500#0#ruby" expanded="true" />
+            <element signature="e#6815#6840#0#ruby" expanded="true" />
+            <element signature="e#6915#6940#0#ruby" expanded="true" />
+            <element signature="e#7246#7269#0#ruby" expanded="true" />
+            <element signature="e#7344#7367#0#ruby" expanded="true" />
+            <element signature="e#7816#7849#0#ruby" expanded="true" />
+            <element signature="e#7975#8021#0#ruby" expanded="true" />
+            <element signature="e#8136#8154#0#ruby" expanded="true" />
+            <element signature="e#8273#8291#0#ruby" expanded="true" />
+            <element signature="e#8394#8430#0#ruby" expanded="true" />
+            <element signature="e#8508#8554#0#ruby" expanded="true" />
+            <element signature="e#8740#8776#0#ruby" expanded="true" />
+            <element signature="e#8941#8984#0#ruby" expanded="true" />
+            <element signature="e#9083#9111#0#ruby" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6960926">
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -20,7 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 sv:
+  elements:
+    email: 'Mailadress'
+    phone: 'Telefonnummer'
+    address: 'Adress'
+    postcode: 'Postnummer'
   date:
+    weekdays: 'veckodagar'
+    weekends: 'helger'
     abbr_day_names:
     - sön
     - mån
@@ -230,10 +237,39 @@ sv:
       my_profile: 'Min profil'
       about: 'Om Oodls'
       contact_us: 'Kontakta oss'
+      decelect_select_all: 'Markera / Avmarkera alla'
+      registrations:
+        organisation_name: 'Organisation'
+        org_description: 'Verksamhetsbeskrivning (max 140 tecken)'
+        org_url: 'Website'
+        org_logo: 'Logotyp (bildfil)'
+        org_contact_header: 'Kontaktdetaljer'
+        org_person: 'Kontaktperson'
+        org_person_email: 'Kontaktpersonens mailadress'
+        org_donation_center_address: 'Upphämtningsadress'
+        password: 'Lösenord'
+        password_cofirm: 'Lösenord (bekräftelse)'
+        open_for_donations: 'Kan ta emot på:'
+        characters_minimum: 'tecken (minimum)'
+      operations:
+        what_food_do_you_accept: 'Vilken mat kan du ta emot?'
+      food:
+        tins: 'konserver'
+        dried_foods: 'torrvaror'
+        coffee_tea: 'kaffe och thé'
+        fruit_veg: 'frukt och grönt'
+        meet_fish: 'kött och fisk'
+        snacks: 'snacks'
+        cereals: 'müsli och flingor'
+        condiments: 'kryddor'
+        cooking_ingreadients: 'matlagningstillbehör'
+        drinks: 'drycker'
+        milk: 'mjölk'
+
     devise-ui:
       sign_in: "Logga in"
       sign_out: 'Logga ut'
-      sign_up: "Registrera dig"
+      sign_up: "Registrera din organisation"
       forgot_password: 'Har du glömt ditt lösenord?'
       remember_me: 'Kom ihåg mig'
 
