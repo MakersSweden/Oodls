@@ -22,6 +22,8 @@
 //= require jquery.fileupload
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
+//= require jquery.raty
+//= require ratyrate
 //= require_tree .
 
 $(function() {

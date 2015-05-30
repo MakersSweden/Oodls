@@ -1,4 +1,5 @@
 class Charity < ActiveRecord::Base
+  ratyrate_rater
   has_many :donation_claims
   has_many :donors, through: :donation_claims
 
