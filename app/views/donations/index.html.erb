@@ -41,6 +41,11 @@
             <p><%= [t('oodls.ui.donations.will_deliver').humanize, donation.will_deliver].join(': ') %></p>
           </div>
         </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <p><%= link_to t('oodls.ui.details').humanize, donation_path(donation) %></p>
+          </div>
+        </div>
       </div>
     </div>
 <% end %>

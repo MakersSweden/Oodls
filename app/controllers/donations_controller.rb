@@ -17,9 +17,12 @@ class DonationsController < ApplicationController
 
   def index
     @donations = Donation.all
+    render 'index'
   end
 
   def show
+    @donation = Donation.find(params[:id])
+    render 'show'
   end
 
   def donation_params

@@ -1,2 +1,54 @@
-<h1>DonationsController#show</h1>
-<p>Find me in app/views/donations_controller/show.html.erb</p>
+<div class="row">
+  <div class="small-12 columns">
+    <h2><%= [t('oodls.ui.donations.donation_show'), @donation.title].join(' ') %></h2>
+  </div>
+</div>
+<div class="row">
+  <div class="small-4 columns">
+    <%= t('oodls.ui.registrations.organisation_name') %>
+  </div>
+  <div class="small-8 columns">
+    <%= @donation.donor ? @donation.donor : 'Not set' %>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="small-4 columns">
+    <%= t('oodls.ui.description').humanize %>
+  </div>
+  <div class="small-8 columns">
+    <%= @donation.description ? @donation.description : 'Not set' %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-4 columns">
+    <%= t('oodls.ui.donations.from_date') %>
+  </div>
+  <div class="small-8 columns">
+    <%= @donation.from_date ? @donation.from_date : 'Not set' %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-4 columns">
+    <%= t('oodls.ui.donations.will_deliver').humanize %>
+  </div>
+  <div class="small-8 columns">
+    <%= @donation.will_deliver %>
+  </div>
+</div>
+
+<% if @donation.donor %>
+    <hr/>
+    <div class="row">
+      <div class="small-4 columns">
+        <%= t('oodls.ui.registrations.org_person') %>
+      </div>
+      <div class="small-8 columns">
+        <%= @donation.donor.contact_neme ? @donation.donor.contact_neme : 'Not set' %>
+      </div>
+    </div>
+<% end %>
+
+
+

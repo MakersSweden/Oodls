@@ -250,6 +250,7 @@ sv:
       title: "titel"
       description: "beskrivning"
       visit_the_website: "Besök hemsidan"
+      details: "detaljer"
       registrations:
         organisation_name: "Organisation"
         org_description: "Verksamhetsbeskrivning (max 140 tecken)"
@@ -282,6 +283,7 @@ sv:
         create_a_donation: "Skapa en donation"
         from_date: "Aktuell from"
         will_deliver: "erbjuder utkörning"
+        donation_show: "Donation: "
     devise-ui:
       sign_in: "Logga in"
       sign_out: "Logga ut"
