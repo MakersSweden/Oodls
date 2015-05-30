@@ -1,8 +1,4 @@
-<div class="row">
-  <div class="small-12 columns">
-    <h2><%= t('oodls.ui.donations.create_a_donation') %></h2>
-  </div>
-</div>
+
 <%= form_for :donation_claim, controller: 'donations', action: 'create' do |f| %>
     <%= f.hidden_field :donation_id %>
     <div class="row">

@@ -226,6 +226,7 @@ en:
         donation_show: "Donation: "
         pick_up_date: "Can pick up (date): "
         accepted: "accepted"
+        claim_donation: "We are interested"
       filter: "filter by food type"
       food: 
         cereals: Cereals

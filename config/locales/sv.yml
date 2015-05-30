@@ -288,6 +288,7 @@ sv:
         donation_show: "Donation: "
         pick_up_date: "Kan hämta (datum): "
         accepted: "accepterad"
+        claim_donation: "Intresseanmälan"
     devise-ui:
       sign_in: "Logga in"
       sign_out: "Logga ut"
