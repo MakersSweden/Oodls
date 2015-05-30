@@ -258,6 +258,7 @@ sv:
         org_person: "Kontaktperson"
         org_person_email: "Kontaktpersonens mailadress"
         org_donation_center_address: "Upphämtningsadress"
+        email: "Mailadress"
         password: "Lösenord"
         password_cofirm: "Lösenord (bekräftelse)"
         open_for_donations: "Kan ta emot på:"
@@ -283,8 +284,11 @@ sv:
     devise-ui:
       sign_in: "Logga in"
       sign_out: "Logga ut"
-      sign_up: "Registrera din organisation"
+      sign_up: "Registrera dig"
       forgot_password: "Har du glömt ditt lösenord?"
       remember_me: "Kom ihåg mig"
-
-
+      organisation:
+        sign_up: "Registrera din organisation"
+      donor:
+        firstname: "Förnamn"
+        surname: "Efternamn"

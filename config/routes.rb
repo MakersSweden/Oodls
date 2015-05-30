@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   resources :charities
   resources :donations
+  resources :donors, only: [:show]
 end
