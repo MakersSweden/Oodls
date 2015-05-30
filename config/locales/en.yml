@@ -211,6 +211,7 @@ en:
       contact: "Vill du komma i kontakt med oss gör du det enklast på: info@oodls.io"
     ui:
       about: "About Oodls"
+      add_donor: "Register as Donor"
       add_charity: "Add a Charity"
       all_charities: "All Charities"
       all_donors: "All Donating organisations"

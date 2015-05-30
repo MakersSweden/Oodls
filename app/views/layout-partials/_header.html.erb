@@ -54,6 +54,7 @@
         <li class="has-dropdown">
           <a href="#"><%= t('oodls.ui.i_have_food_to_give') %></a>
           <ul class="dropdown">
+            <li><%= link_to t('oodls.ui.add_donor'), new_donor_registration_path %></li>
             <li><%= link_to t('oodls.devise-ui.sign_in'), donor_session_path %></li>
             <li><%= link_to t('oodls.ui.all_donors'), donors_index_path %></li>
             <li><%= link_to t('oodls.ui.where_to_give'), charities_path %></li>
