@@ -6,7 +6,10 @@ include CharityHelper
 feature 'Charities:' do
 
 	context 'charity not signed up/in on the homepage' do
-
+		before(:each) do
+			I18n.locale = :en
+    end
+    
 		scenario 'should see a "Add a Charity" button' do
 			visit '/'
 			expect(page).to have_link 'Add a Charity'
