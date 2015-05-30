@@ -3,7 +3,7 @@
     <div class="small-12 medium-6 large-3 columns">
       <div class="row charity-image">
         <div class="small-12 columns">
-          <%= link_to (image_tag charity.logo.url(:thumb)), "/charities/#{charity.id}" %>
+          <%= link_to (cl_image_tag charity.logo.path, { width: 200, height: 200, crop: :thumb} ), "/charities/#{charity.id}" %>
         </div>
       </div>
       <div class="small-12 columns">
