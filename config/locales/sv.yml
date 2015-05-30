@@ -253,6 +253,7 @@ sv:
       details: "detaljer"
       comment: "kommentar"
       comments: "kommentarer"
+      use_my_location: "Använd min position"
       registrations:
         organisation_name: "Organisation"
         org_description: "Verksamhetsbeskrivning (max 140 tecken)"
