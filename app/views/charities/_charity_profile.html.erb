@@ -1,7 +1,11 @@
 <div class="charity-profile row">
   <div class="small-12 medium-6 large-3 columns">
     <div class="row">
-      <%= image_tag @charity.logo.url(:thumb) %>
+      <% if @charity.logo? %>
+        <%= cl_image_tag @charity.logo.path, { width: 200, height: 200, crop: :thumb} %>
+      <% else %>
+        <%= image_tag '/images/oodls-placeholder.svg', { width: 200, height: 200} %>
+      <% end %>
     </div>
   </div>
   <div class="small-12 medium-6 large-3 columns">

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'set_language/swedish'
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
+  mount Attachinary::Engine => "/attachinary"
   devise_for :charities, :donors
 
   root 'home#index'
