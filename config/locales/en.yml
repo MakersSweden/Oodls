@@ -220,12 +220,21 @@ en:
       description: description
       do_i_qualify: "Am I qualified?"
       donation_guidlines: "Donation Guidelines"
+      visit_the_website: "Visit the website"
+      comment: "comment"
+      comments: "comments"
+      donations:
+        all_donations: "Current donations"
       donations:
         create_a_donation: "Create a donation"
         from_date: "Available from"
         will_deliver: "offer delivery"
+        donation_show: "Donation: "
+        pick_up_date: "Can pick up (date): "
+        accepted: "accepted"
+        claim_donation: "We are interested"
       filter: "filter by food type"
-      food:
+      food: 
         cereals: Cereals
         coffee_tea: "Coffee & Tea"
         condiments: condiments

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/charity' => 'charities#index'
 
   resources :charities
-  resources :donations
+  resources :donations do
+    resources :donation_claims, only: [:create, :destroy]
+  end
   resources :donors, only: [:show]
 end

@@ -1,2 +1,51 @@
-<h1>DonationsController#index</h1>
-<p>Find me in app/views/donations_controller/index.html.erb</p>
+<div class="row">
+  <div class="small-6 columns">
+    <h2><%= t('oodls.ui.donations.all_donations') %></h2>
+  </div>
+</div>
+
+<% @donations.each do |donation| %>
+    <div class="charity-listing row">
+      <div class="small-12 columns">
+        <% if donation.try(:donor) %>
+            <div class="row">
+              <div class="small-12 columns">
+                <h2><%= link_to donation.donor, "/donors/#{donation.donor}" %></h2>
+              </div>
+            </div>
+        <% end %>
+        <% if donation.try(:donor).try(:website_url) %>
+            <div class="row">
+              <div class="small-12 columns">
+                <%= link_to t('oodls.ui.visit_the_website'), donation.donor.website_url %>
+              </div>
+            </div>
+        <% end %>
+        <div class="row">
+          <div class="small-12 columns">
+            <h3><%= donation.title %></h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <%= donation.description %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <%= [t('oodls.ui.donations.from_date').humanize, donation.from_date].join(': ') %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <p><%= [t('oodls.ui.donations.will_deliver').humanize, donation.will_deliver].join(': ') %></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <p><%= link_to t('oodls.ui.details').humanize, donation_path(donation) %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>

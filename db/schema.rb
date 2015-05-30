@@ -71,6 +71,19 @@ ActiveRecord::Schema.define(version: 20150530075944) do
   add_index "charities", ["email"], name: "index_charities_on_email", unique: true, using: :btree
   add_index "charities", ["reset_password_token"], name: "index_charities_on_reset_password_token", unique: true, using: :btree
 
+  create_table "donation_claims", force: true do |t|
+    t.integer  "charity_id"
+    t.integer  "donation_id"
+    t.text     "comment"
+    t.date     "pick_up_date"
+    t.boolean  "accepted"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "donation_claims", ["charity_id"], name: "index_donation_claims_on_charity_id", using: :btree
+  add_index "donation_claims", ["donation_id"], name: "index_donation_claims_on_donation_id", using: :btree
+
   create_table "donations", force: true do |t|
     t.integer  "donor_id"
     t.string   "title"

@@ -1,0 +1,36 @@
+<%= form_for [@donation, @donation_claim] do |f| %>
+    <div class="row">
+      <div class="small-4 columns">
+        <p><%= t('oodls.ui.comment').humanize %> &#42;</p>
+      </div>
+      <div class="small-8 columns">
+        <%= f.text_field :comment, placeholder: t('oodls.ui.comment').humanize %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-4 columns">
+        <p><%= t('oodls.ui.donations.pick_up_date').humanize %> &#42;</p>
+      </div>
+      <div class="small-3 columns" style="float:left !important;">
+        <%= f.date_field :pick_up_date %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-4 columns">
+        <p><%= t('oodls.ui.donations.accepted').humanize %></p>
+      </div>
+      <div class="row">
+        <div class="switch small small-3 columns">
+          <%= f.check_box(:accepted) %>
+          <%= f.label(:accepted, t('oodls.ui.donations.accepted').humanize) %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <div class="actions">
+          <%= f.submit t('oodls.ui.submit'), class: 'small button' %>
+        </div>
+      </div>
+    </div>
+<% end %>
