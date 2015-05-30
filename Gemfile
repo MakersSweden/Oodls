@@ -35,6 +35,9 @@ end
 group :test, :development do
 	gem 'jasmine-rails'
 	gem 'foreman'
+  gem 'pry-byebug'
+  gem 'awesome_print'
+  gem 'pry-rails'
 end
 
 group :development do
