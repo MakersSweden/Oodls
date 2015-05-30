@@ -234,7 +234,7 @@ en:
         accepted: "accepted"
         claim_donation: "We are interested"
       filter: "filter by food type"
-      food:
+      food: 
         cereals: Cereals
         coffee_tea: "Coffee & Tea"
         condiments: condiments
