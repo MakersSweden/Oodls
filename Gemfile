@@ -22,6 +22,7 @@ gem 'rails-i18n', '~> 4.0.0'
 
 gem 'cloudinary'
 gem 'attachinary'
+gem 'ratyrate'
 
 group :test do
 	gem 'rspec-rails'
@@ -35,6 +36,9 @@ end
 group :test, :development do
 	gem 'jasmine-rails'
 	gem 'foreman'
+  gem 'pry-byebug'
+  gem 'awesome_print'
+  gem 'pry-rails'
 end
 
 group :development do

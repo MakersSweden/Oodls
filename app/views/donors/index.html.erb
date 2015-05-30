@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="small-6 columns">
+    <h2><%= t('oodls.ui.all_donors') %></h2>
+  </div>
+  <div class="small-6 columns text-right">
+    <%= link_to t('oodls.ui.back').humanize, root_path, class: "button small" %>
+  </div>
+</div>
+
+<%= render 'all_donors_display' %>

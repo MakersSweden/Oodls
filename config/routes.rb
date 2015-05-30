@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
+  get 'donors/index'
+
+  get 'donors/show'
+
   get 'set_language/english'
 
   get 'set_language/swedish'
@@ -12,6 +17,8 @@ Rails.application.routes.draw do
   get '/charity' => 'charities#index'
 
   resources :charities
-  resources :donations
-  resources :donors
+  resources :donations do
+    resources :donation_claims, only: [:create, :destroy]
+  end
+  resources :donors, only: [:show]
 end

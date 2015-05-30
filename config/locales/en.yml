@@ -214,6 +214,7 @@ en:
       add_donor: "Register as Donor"
       add_charity: "Add a Charity"
       all_charities: "All Charities"
+      all_donors: "All Donating organisations"
       all_records: all
       back: back
       contact_us: "Contact us"
@@ -221,12 +222,28 @@ en:
       description: description
       do_i_qualify: "Am I qualified?"
       donation_guidlines: "Donation Guidelines"
+      visit_the_website: "Visit the website"
+      comment: "comment"
+      comments: "comments"
+      use_my_location: "Use my location"
+      donations:
+        all_donations: "Current donations"
       donations:
         create_a_donation: "Create a donation"
         from_date: "Available from"
         will_deliver: "offer delivery"
+        donation_show: "Donation: "
+        pick_up_date: "Can pick up (date): "
+        accepted: "accepted"
+        claim_donation: "We are interested"
+      splash:
+        message_1: "We throw away 7 million tonnes of food and drink from our homes every year"
+        message_2: "We throw away more food from our homes than packaging"
+        message_3: "Between 2007 and 2012 avoidable food waste has been reduced by 21%, equivalent to over 1 million tonnes"
+        message_4: "An area almost the size of Wales would be needed to grow all of the food we throw away each year"
+        message_5: ""
       filter: "filter by food type"
-      food:
+      food: 
         cereals: Cereals
         coffee_tea: "Coffee & Tea"
         condiments: condiments
@@ -263,6 +280,10 @@ en:
       title: title
       what_mote_can_i_do: "What more can I do?"
       where_to_give: "Where to give?"
+      ideas_suggestions: "Ideas / Suggestions?"
+      coders: "Coders: want to contribute?"
+      open_source_message: "Oodls is an open-source project. If you'd like to help maintain the site"
+      fork_us: "fork us on GitHub!"
   order:
     - !ruby/symbol year
     - !ruby/symbol month

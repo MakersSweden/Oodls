@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :set_current_charity
+  before_filter :set_locale
 
   def set_current_charity
     @current_charity = current_charity if charity_signed_in?
@@ -60,6 +61,5 @@ class ApplicationController < ActionController::Base
   def set_locale
     I18n.locale = session[:locale] || I18n.default_locale
     session[:locale] = I18n.locale
-    redirect_to :back
   end
 end

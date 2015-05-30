@@ -20,7 +20,12 @@ class DonationsController < ApplicationController
   end
 
   def show
+    @donation = Donation.find(params[:id])
+    @donation_claims = @donation.donation_claims.all
+    @donation_claim = @donation.donation_claims.build
   end
+
+  private
 
   def donation_params
     params.require(:donation).permit(:title,

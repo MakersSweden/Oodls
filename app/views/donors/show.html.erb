@@ -1,1 +1,50 @@
-Your Profile
+<div class="charity-profile row">
+  <div class="small-12 medium-6 large-3 columns">
+    <div class="row">
+      <% if @donor.logo? %>
+          <%= cl_image_tag @charity.logo.path, { width: 200, height: 200, crop: :thumb} %>
+      <% else %>
+          <%= image_tag '/images/oodls-placeholder.svg', { width: 200, height: 200} %>
+      <% end %>
+    </div>
+  </div>
+  <div class="small-12 medium-6 large-3 columns">
+    <div class="row">
+      <h2><%= @donor.organisation %></h2>
+    </div>
+    <div class="row">
+      <%= @donor.description %>
+    </div>
+    <% if @donor.website_url %>
+        <div class="row">
+          <%= link_to t('oodls.ui.visit_the_website'), @donor.website_url %>
+        </div>
+    <% end %>
+  </div>
+  <div class="small-12 medium-6 large-3 columns">
+    <div class="row">
+      <h3>Contact info:</h3>
+      <ul class="no-bullet">
+        <li><%= @donor.contact_name %></li>
+        <li><a href="mailto:<%= @donor.email %>">Email Us</a></li>
+        <li><%= @donor.full_address %></li>
+        <li><%= @donor.postcode %></li>
+      </ul>
+    </div>
+  </div>
+  <div class="small-12 medium-6 large-3 columns">
+    <div class="row">
+      <div class="small-12 columns">
+        <h3>Rating</h3>
+        <ul>
+          <li>
+            Quality  : <%= rating_for @donor, "quality", cancel: true %>
+          </li>
+          <li>
+            Reliability : <%= rating_for @donor, "reliability", cancel: true %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
