@@ -73,5 +73,5 @@ Guardfile
 .vagrant/
 tags
 
-#cloudinary settingd
+#cloudinary settings
 config/cloudinary.yml

@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -7,9 +6,11 @@ class ApplicationController < ActionController::Base
   before_filter :set_current_charity
 
   def set_current_charity
-    if charity_signed_in?
-      @current_charity = current_charity
-    end
+    @current_charity = current_charity if charity_signed_in?
+  end
+
+  def set_current_donor
+    @current_donor = current_donor if donor_signed_in?
   end
 
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -44,16 +45,16 @@ class ApplicationController < ActionController::Base
       :uht_milk,
       :none
     ])
-  	devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(these) }
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(these) }
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(these) }
   end
 
   def after_sign_in_path_for(resource_or_scope)
-  	if resource_or_scope.is_a?(Charity)
-  		charity_path
-  	else
-  		super
-  	end
+    if resource_or_scope.is_a?(Charity)
+      charity_path
+    else
+      super
+    end
   end
 
   def set_locale
@@ -61,5 +62,4 @@ class ApplicationController < ActionController::Base
     session[:locale] = I18n.locale
     redirect_to :back
   end
-
 end
