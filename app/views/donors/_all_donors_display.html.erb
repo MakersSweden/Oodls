@@ -47,13 +47,13 @@
       <div class="small-12 medium-6 large-3 columns">
         <div class="row">
           <div class="small-12 columns">
-            <h3>Rating</h3>
+            <h3><%= t('oodls.ui.rating').humanize %></h3>
             <ul>
               <li>
-                Quality  : <%= rating_for donor, "quality", cancel: true %>
+                <%= t('oodls.ui.quality') %>   : <%= rating_for donor, "quality", cancel: true %>
               </li>
               <li>
-                Reliability : <%= rating_for donor, "reliability", cancel: true %>
+                <%= t('oodls.ui.reliability') %>  : <%= rating_for donor, "reliability", cancel: true %>
               </li>
             </ul>
           </div>
