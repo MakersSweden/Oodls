@@ -110,6 +110,36 @@ var addTescoMarkers = function(tesco_info){
   });
 };
 
+var addChurchMarkers = function(lat, lng){
+  var url = "http://api.svenskakyrkan.se/platser/v3/place?nearby=" + lng + "," + lat + "&nearbyRadius=50000&is=church&apikey=6e0b08cf-e05b-4ffb-80bb-6c04f619117a"
+  $.getJSON(url, function(json){
+    for(var index = 0; index < json["Results"].length; index++) {
+      var i = json["Results"][index];
+      var charity_data = [{
+        organisation: i.Name,
+        weekday_hours: "10 AM - 4 PM",
+        weekend_hours: "7 AM - 7 PM",
+        id: 1,
+        lat: i.Geolocation.Coordinates[1],
+        lon: i.Geolocation.Coordinates[0]
+      }];
+      var requirements =  ["Milk", "Snacks", "Cereal"];
+      var charity_info = fillInfoWindow(0, charity_data, requirements);
+      map.addMarker({
+        lat: i.Geolocation.Coordinates[1],
+        lng: i.Geolocation.Coordinates[0],
+        icon: markerImage('images/church-pin.png', 30, 48, 0, 0, 15, 48),
+        animation: google.maps.Animation.DROP,
+        infoWindow: infoWindowDisplay(charity_info),
+        click: function(event){
+          this.infoWindow.open(this.map, this);
+          $('.search-box').fadeIn(1000);
+        }
+      });
+    }
+  });
+};
+
 var getCharityData = function(){
   var charity_data = $('.charity_data_class').data('charities-for-map');
   assembleCharityMarkers(charity_data);
@@ -254,6 +284,7 @@ var assembleMap = function(postcode) {
         applyMapStyle();
         addUserMarker(latlng.lat(), latlng.lng());
         addTescoMarkers();
+        addChurchMarkers(latlng.lat(), latlng.lng());
         getCharityData();
       }
       else {
