@@ -1,0 +1,56 @@
+<% @donors.each do |donor| %>
+    <div class="charity-listing row">
+      <div class="small-12 medium-6 large-3 columns">
+        <div class="row charity-image">
+          <div class="small-12 columns">
+            <% if donor.logo? %>
+                <%= link_to (cl_image_tag (charity.logo.present? ? donor.logo.path : '/images/oodls-placeholder.svg'), { width: 200, height: 200, crop: :thumb} ), "/donors/#{donor.id}" %>
+            <% else %>
+                <%= image_tag '/images/oodls-placeholder.svg', { width: 200, height: 200} %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="small-12 medium-6 large-3 columns">
+        <div class="row">
+          <div class="small-12 columns">
+            <h2><%= link_to donor.organisation, "/donors/#{donor.id}" %></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <%= donor.description %>
+          </div>
+        </div>
+        <% if donor.website_url %>
+            <div class="row">
+              <div class="small-12 columns">
+                <%= link_to t('oodls.ui.visit_the_website'), donor.website_url %>
+              </div>
+            </div>
+        <% end %>
+      </div>
+      <div class="small-12 medium-6 large-3 columns">
+        <div class="row">
+          <div class="small-12 columns">
+            <h3><%= t('oodls.ui.registrations.org_contact_header') %></h3>
+            <ul class="no-bullet">
+              <li><%= donor.contact_name %></li>
+              <li><a href="mailto:<%= donor.email %>"><%= t('oodls.ui.contact_us') %></a></li>
+              <li><%= donor.full_address %></li>
+              <li><%= donor.postcode %></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="small-12 medium-6 large-3 columns">
+        <div class="row">
+          <div class="small-12 columns">
+            <h3>Rating</h3>
+            <p>rating placeholder</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>

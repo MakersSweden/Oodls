@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'donors/index'
+
+  get 'donors/show'
+
   get 'set_language/english'
 
   get 'set_language/swedish'
