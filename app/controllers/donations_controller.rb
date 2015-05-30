@@ -22,7 +22,17 @@ class DonationsController < ApplicationController
 
   def show
     @donation = Donation.find(params[:id])
-    render 'show'
+    @donation_claims = @donation.donation_claims.all
+    @donation_claim = @donation.donation_claims.build
+  end
+
+  def save_claim
+    unless @donation_claim.save
+      flash[:notice] = 'All good'
+    else
+      flash[:notice] = 'No good'
+    end
+    
   end
 
   def donation_params

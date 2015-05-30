@@ -251,6 +251,8 @@ sv:
       description: "beskrivning"
       visit_the_website: "Besök hemsidan"
       details: "detaljer"
+      comment: "kommentar"
+      comments: "kommentarer"
       registrations:
         organisation_name: "Organisation"
         org_description: "Verksamhetsbeskrivning (max 140 tecken)"
@@ -284,6 +286,8 @@ sv:
         from_date: "Aktuell from"
         will_deliver: "erbjuder utkörning"
         donation_show: "Donation: "
+        pick_up_date: "Kan hämta (datum): "
+        accepted: "accepterad"
     devise-ui:
       sign_in: "Logga in"
       sign_out: "Logga ut"

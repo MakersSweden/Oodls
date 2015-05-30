@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :charities
   resources :donations do
+    post 'donations/:id', controller: :donations, action: :save_claimm, as: :create_claim
     resources :donation_claims, only: [:create, :destroy]
   end
 end

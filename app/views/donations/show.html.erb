@@ -50,5 +50,27 @@
     </div>
 <% end %>
 
+<hr/>
+<div class="row">
+  <div class="small-12 columns">
+    <h3>Claim donation</h3>
+    <% @donation_claims.each do |claim| %>
+        <div>
+          <strong><%= claim.charity.organisation %></strong>
+          <br />
+          <p><%= claim.comment %></p>
+          <p><%= link_to 'Delete', donation_claim_path(claim), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 columns">
+    <%= render 'donation_claims/form' %>
+  </div>
+</div>
+
+
 
 
