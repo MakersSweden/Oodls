@@ -17,7 +17,6 @@ class DonationsController < ApplicationController
 
   def index
     @donations = Donation.all
-    render 'index'
   end
 
   def show
@@ -26,14 +25,7 @@ class DonationsController < ApplicationController
     @donation_claim = @donation.donation_claims.build
   end
 
-  def save_claim
-    unless @donation_claim.save
-      flash[:notice] = 'All good'
-    else
-      flash[:notice] = 'No good'
-    end
-
-  end
+  private
 
   def donation_params
     params.require(:donation).permit(:title,

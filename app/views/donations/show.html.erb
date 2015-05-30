@@ -59,18 +59,19 @@
           <strong><%= claim.charity.organisation %></strong>
           <br />
           <p><%= claim.comment %></p>
-          <p><%= link_to 'Delete', donation_claim_path(claim), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          <% if current_charity == claim.charity %>
+            <p><%= link_to 'Delete', donation_donation_claim_path(claim.donation.id, claim.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          <% end %>
         </div>
     <% end %>
   </div>
 </div>
 
-<div class="row">
-  <div class="small-12 columns">
-    <%= render 'donation_claims/form' %>
+<% if current_charity.present? %>
+  <div class="row">
+    <div class="small-12 columns">
+      <%= render 'donation_claims/form' %>
+    </div>
   </div>
-</div>
-
-
-
+<% end %>
 
