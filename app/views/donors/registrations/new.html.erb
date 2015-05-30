@@ -6,23 +6,72 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <div class="row">
     <div class="small-12 columns">
-      <div class="field">
-        <%= f.text_field :firstname, autofocus: true, placeholder: t('oodls.devise-ui.donor.firstname') %>
-      </div>
+      <%= devise_error_messages! %>
     </div>
   </div>
-  <div class="row">
-    <div class="small-12 columns">
-      <div class="field">
-        <%= f.text_field :surname, placeholder: t('oodls.devise-ui.donor.surname') %>
-      </div>
+  <div class ="row">
+    <div class="small-4 columns">
+      <p><%= t('oodls.ui.registrations.organisation_name') %> &#42;</p>
+    </div>
+    <div class="small-8 columns">
+      <%= f.text_field :organisation, autofocus: true, placeholder: t('oodls.ui.registrations.organisation_name') %>
     </div>
   </div>
-  <div class="row">
+  <div class ="row">
+  <div class="small-12 columns">
+    <%= f.text_field :description, placeholder: t('oodls.ui.registrations.org_description') %>
+    </div>
+  </div>
+  <div class ="row">
     <div class="small-12 columns">
-      <div class="field">
-        <%= f.email_field :email, autofocus: true, placeholder: t('oodls.ui.registrations.email') %>
-      </div>
+      <%= f.text_field :website_url, placeholder: t('oodls.ui.registrations.org_url') %>
+    </div>
+  </div>
+  <div class ="row">
+    <div class="small-12 columns">
+      <h4><%= t('oodls.ui.registrations.org_logo') %></h4>
+    </div>
+  </div>
+  <div class ="row">
+    <div class="small-12 columns">
+      <%= f.attachinary_file_field :logo %>
+    </div>
+  </div>
+  <div class ="row">
+    <div class="small-12 columns">
+      <h4><%= t('oodls.ui.registrations.org_contact_header') %></h4>
+    </div>
+  </div>
+  <div class ="row">
+    <div class="small-4 columns">
+      <p><%= t('oodls.ui.registrations.org_person') %></p>
+    </div>
+    <div class="small-8 columns">
+      <%= f.text_field :contact_name, placeholder: t('oodls.ui.registrations.org_person') %>
+    </div>
+  </div>
+  <div class ="row">
+    <div class="small-4 columns">
+      <p><%= t('elements.email') %> &#42;</p>
+    </div>
+    <div class="small-8 columns">
+      <%= f.email_field :email, placeholder: t('oodls.ui.registrations.org_person_email') %>
+    </div>
+  </div>
+  <div class ="row">
+    <div class="small-4 columns">
+      <p><%= t('elements.address') %> &#42;</p>
+    </div>
+    <div class="small-8 columns">
+      <%= f.text_field :full_address, placeholder: t('oodls.ui.registrations.org_donation_center_address') %>
+    </div>
+  </div>
+  <div class ="row">
+    <div class="small-4 columns">
+      <p><%= t('elements.postcode') %> &#42;</p>
+    </div>
+    <div class="small-8 columns">
+      <%= f.text_field :postcode, placeholder: t('elements.postcode') %>
     </div>
   </div>
   <div class ="row">

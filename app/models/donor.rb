@@ -4,4 +4,5 @@ class Donor < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :firstname, :surname, presence: true
+  has_attachment :logo
 end

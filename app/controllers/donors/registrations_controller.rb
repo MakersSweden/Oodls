@@ -40,13 +40,18 @@ class Donors::RegistrationsController < Devise::RegistrationsController
 
   # You can put the params you want to permit in the empty array.
   def configure_sign_up_params
-    allow = [:firstname, :surname, :email, :password, :password_confirmation]
+
+    allow = [:firstname, :surname, :email, :password, :password_confirmation,
+             :organisation, :description, :postcode, :full_address,
+             :website_url, :contact_name]
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(allow) }
   end
 
   # You can put the params you want to permit in the empty array.
   def configure_account_update_params
-    allow = [:firstname, :surname, :email, :password, :password_confirmation]
+    allow = [:firstname, :surname, :email, :password, :password_confirmation,
+             :organisation, :description, :postcode, :full_address,
+             :website_url, :contact_name]
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(allow) }
   end
 
