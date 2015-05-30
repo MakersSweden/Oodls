@@ -33,7 +33,9 @@
             c6.6,4.3,14.5,7.9,23.9,10.8s19.6,5.7,30.8,8.4c10.5,2.7,20.7,5.9,30.5,9.6c9.9,3.7,18.6,8.2,26.2,13.7c7.6,5.4,13.6,12.2,18,20.4
             C1394.1,404.9,1396.4,415,1396.4,427z"/>
             </g>
-            <text stroke="#000000" transform="matrix(3.0408401489257812,0,0,3.243047714233398,-2133.726438999176,-1485.3775866031647) " xml:space="preserve" text-anchor="middle" font-family="Sans-serif" font-size="24" id="svg_1" y="660.36673" x="1036.36676" stroke-width="0" fill="#ffffff">För ett hållbart samhälle</text>
+            <text stroke="#000000" transform="matrix(3.0408401489257812,0,0,3.243047714233398,-2133.726438999176,-1485.3775866031647) " xml:space="preserve" text-anchor="middle" font-family="Sans-serif" font-size="24" id="svg_1" y="660.36673" x="1036.36676" stroke-width="0" fill="#ffffff">För
+              ett hållbart samhälle
+            </text>
             </g>
           </svg>
         </a>
@@ -44,10 +46,10 @@
     <section class="top-bar-section">
       <ul class="left">
         <li>
-        <%= link_to_unless I18n.locale == :en, 'EN', set_language_english_path %>
+          <%= link_to_unless I18n.locale == :en, 'EN', set_language_english_path %>
         </li>
         <li>
-        <%= link_to_unless I18n.locale == :sv, 'SV', set_language_swedish_path %>
+          <%= link_to_unless I18n.locale == :sv, 'SV', set_language_swedish_path %>
         </li>
       </ul>
       <ul class="right">
@@ -66,12 +68,14 @@
         <li class="has-dropdown">
           <a href="#"><%= t('oodls.ui.i_am_a_charity') %></a>
           <ul class="dropdown">
+            <% unless charity_signed_in? %>
+                <li><%= link_to t('oodls.ui.add_charity'), new_charity_registration_path %></li>
+            <% end %>
             <li><%= link_to t('oodls.devise-ui.sign_in'), new_charity_session_path %></li>
             <li><%= link_to t('oodls.ui.all_charities'), charities_path %></li>
             <% if charity_signed_in? %>
                 <li><%= link_to t('oodls.ui.my_profile'), "/charities/#{@current_charity.id}" %></li>
             <% else %>
-                <li><%= link_to t('oodls.ui.add_charity') , new_charity_registration_path %></li>
                 <li><%= link_to t('oodls.ui.do_i_qualify'), "#", "data-reveal-id" => "qualifications-modal" %></li>
             <% end %>
           </ul>
