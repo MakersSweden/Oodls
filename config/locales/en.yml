@@ -233,6 +233,12 @@ en:
         pick_up_date: "Can pick up (date): "
         accepted: "accepted"
         claim_donation: "We are interested"
+      splash:
+        message_1: "We throw away 7 million tonnes of food and drink from our homes every year"
+        message_2: "We throw away more food from our homes than packaging"
+        message_3: "Between 2007 and 2012 avoidable food waste has been reduced by 21%, equivalent to over 1 million tonnes"
+        message_4: "An area almost the size of Wales would be needed to grow all of the food we throw away each year"
+        message_5: ""
       filter: "filter by food type"
       food: 
         cereals: Cereals
