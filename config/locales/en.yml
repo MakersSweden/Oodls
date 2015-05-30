@@ -1,7 +1,7 @@
---- 
-en: 
-  date: 
-    abbr_day_names: 
+---
+en:
+  date:
+    abbr_day_names:
       - Sun
       - Mon
       - Tue
@@ -9,7 +9,7 @@ en:
       - Thu
       - Fri
       - Sat
-    abbr_month_names: 
+    abbr_month_names:
       - ~
       - Jan
       - Feb
@@ -25,50 +25,50 @@ en:
       - Dec
     weekdays: weekdays
     weekends: weekends
-  datetime: 
-    distance_in_words: 
-      about_x_hours: 
+  datetime:
+    distance_in_words:
+      about_x_hours:
         one: "about 1 hour"
         other: "about %{count} hours"
-      about_x_months: 
+      about_x_months:
         one: "about 1 month"
         other: "about %{count} months"
-      about_x_years: 
+      about_x_years:
         one: "about 1 year"
         other: "about %{count} years"
-      almost_x_years: 
+      almost_x_years:
         one: "almost 1 year"
         other: "almost %{count} years"
       half_a_minute: "half a minute"
-      less_than_x_minutes: 
+      less_than_x_minutes:
         one: "less than a minute"
         other: "less than %{count} minutes"
-      less_than_x_seconds: 
+      less_than_x_seconds:
         one: "less than 1 second"
         other: "less than %{count} seconds"
-      over_x_years: 
+      over_x_years:
         one: "over 1 year"
         other: "over %{count} years"
-      x_days: 
+      x_days:
         one: "1 day"
         other: "%{count} days"
-      x_minutes: 
+      x_minutes:
         one: "1 minute"
         other: "%{count} minutes"
-      x_months: 
+      x_months:
         one: "1 month"
         other: "%{count} months"
-      x_seconds: 
+      x_seconds:
         one: "1 second"
         other: "%{count} seconds"
-    prompts: 
+    prompts:
       day: Day
       hour: Hour
       minute: Minute
       month: Month
       second: Seconds
       year: Year
-  day_names: 
+  day_names:
     - Sunday
     - Monday
     - Tuesday
@@ -76,14 +76,14 @@ en:
     - Thursday
     - Friday
     - Saturday
-  elements: 
+  elements:
     address: Address
     email: Email
     phone: Phone
     postcode: Postcode
-  errors: 
+  errors:
     format: "%{attribute} %{message}"
-    messages: 
+    messages:
       accepted: "must be accepted"
       blank: "can't be blank"
       confirmation: "doesn't match %{attribute}"
@@ -103,36 +103,36 @@ en:
       other_than: "must be other than %{count}"
       present: "must be blank"
       record_invalid: "Validation failed: %{errors}"
-      restrict_dependent_destroy: 
+      restrict_dependent_destroy:
         many: "Cannot delete record because dependent %{record} exist"
         one: "Cannot delete record because a dependent %{record} exists"
       taken: "has already been taken"
-      too_long: 
+      too_long:
         one: "is too long (maximum is 1 character)"
         other: "is too long (maximum is %{count} characters)"
-      too_short: 
+      too_short:
         one: "is too short (minimum is 1 character)"
         other: "is too short (minimum is %{count} characters)"
-      wrong_length: 
+      wrong_length:
         one: "is the wrong length (should be 1 character)"
         other: "is the wrong length (should be %{count} characters)"
-    template: 
+    template:
       body: "There were problems with the following fields:"
-      header: 
+      header:
         one: "1 error prohibited this %{model} from being saved"
         other: "%{count} errors prohibited this %{model} from being saved"
-  formats: 
+  formats:
     default: "%Y-%m-%d"
     long: "%B %d, %Y"
     short: "%b %d"
-  helpers: 
-    select: 
+  helpers:
+    select:
       prompt: "Please select"
-    submit: 
+    submit:
       create: "Create %{model}"
       submit: "Save %{model}"
       update: "Update %{model}"
-  month_names: 
+  month_names:
     - ~
     - January
     - February
@@ -146,9 +146,9 @@ en:
     - October
     - November
     - December
-  number: 
-    currency: 
-      format: 
+  number:
+    currency:
+      format:
         delimiter: ","
         format: "%u%n"
         precision: 2
@@ -156,55 +156,60 @@ en:
         significant: false
         strip_insignificant_zeros: false
         unit: $
-    format: 
+    format:
       delimiter: ","
       precision: 3
       separator: "."
       significant: false
       strip_insignificant_zeros: false
-    human: 
-      decimal_units: 
+    human:
+      decimal_units:
         format: "%n %u"
-        units: 
+        units:
           billion: Billion
           million: Million
           quadrillion: Quadrillion
           thousand: Thousand
           trillion: Trillion
           unit: ""
-      format: 
+      format:
         delimiter: ""
         precision: 3
         significant: true
         strip_insignificant_zeros: true
-      storage_units: 
+      storage_units:
         format: "%n %u"
-        units: 
-          byte: 
+        units:
+          byte:
             one: Byte
             other: Bytes
           gb: GB
           kb: KB
           mb: MB
           tb: TB
-    percentage: 
-      format: 
+    percentage:
+      format:
         delimiter: ""
         format: "%n%"
-    precision: 
-      format: 
+    precision:
+      format:
         delimiter: ""
-  oodls: 
-    devise-ui: 
+  oodls:
+    devise-ui:
       forgot_password: "Did you forget your password?"
       remember_me: "Remember me"
       sign_in: "Sign In"
       sign_out: "Sign Out"
       sign_up: "Sign Up"
-    info: 
+      organisation:
+        sign_up: "Register your charity"
+      donor:
+        firstname: "First Name"
+        surname: "Surname"
+    info:
       about: "Oolds siktar in sig på att vara en del av lösningen av matslöseriet i samhället."
       contact: "Vill du komma i kontakt med oss gör du det enklast på: info@oodls.io"
-    ui: 
+    ui:
       about: "About Oodls"
       add_charity: "Add a Charity"
       all_charities: "All Charities"
@@ -220,6 +225,7 @@ en:
       comments: "comments"
       donations:
         all_donations: "Current donations"
+      donations:
         create_a_donation: "Create a donation"
         from_date: "Available from"
         will_deliver: "offer delivery"
@@ -228,7 +234,7 @@ en:
         accepted: "accepted"
         claim_donation: "We are interested"
       filter: "filter by food type"
-      food: 
+      food:
         cereals: Cereals
         coffee_tea: "Coffee & Tea"
         condiments: condiments
@@ -243,9 +249,9 @@ en:
       i_am_a_charity: "I am a charity"
       i_have_food_to_give: "I have food to give"
       my_profile: "My Profile"
-      operations: 
+      operations:
         what_food_do_you_accept: "What food dou you accept?"
-      registrations: 
+      registrations:
         characters_minimum: "characters minimum"
         open_for_donations: "Open for donations:"
         org_contact_header: "Contact information"
@@ -256,6 +262,7 @@ en:
         org_person_email: "Contact\\'s Email Address"
         org_url: "Website Address"
         organisation_name: "Organisation Name"
+        email: "Email"
         password: Password
         password_cofirm: "Password Confirmation"
       seach_charities: "Search for organisations"
@@ -264,18 +271,18 @@ en:
       title: title
       what_mote_can_i_do: "What more can I do?"
       where_to_give: "Where to give?"
-  order: 
+  order:
     - !ruby/symbol year
     - !ruby/symbol month
     - !ruby/symbol day
-  support: 
-    array: 
+  support:
+    array:
       last_word_connector: ", and "
       two_words_connector: " and "
       words_connector: ", "
-  time: 
+  time:
     am: am
-    formats: 
+    formats:
       default: "%a, %d %b %Y %H:%M:%S %z"
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
