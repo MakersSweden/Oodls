@@ -4,7 +4,7 @@
         <div class="row charity-image">
           <div class="small-12 columns">
             <% if donor.logo? %>
-                <%= link_to (cl_image_tag (donor.logo.present? ? donor.logo.path : '/images/oodls-placeholder.svg'), { width: 200, height: 200, crop: :thumb} ), "/donors/#{donor.id}" %>
+                <%= link_to (cl_image_tag donor.logo.path, { width: 200, height: 200, crop: :thumb} ), "/donors/#{donor.id}" %>
             <% else %>
                 <%= image_tag '/images/oodls-placeholder.svg', { width: 200, height: 200} %>
             <% end %>

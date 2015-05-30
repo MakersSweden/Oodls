@@ -43,7 +43,7 @@ class Donors::RegistrationsController < Devise::RegistrationsController
 
     allow = [:firstname, :surname, :email, :password, :password_confirmation,
              :organisation, :description, :postcode, :full_address,
-             :website_url, :contact_name]
+             :website_url, :contact_name, :logo]
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(allow) }
   end
 
@@ -51,7 +51,7 @@ class Donors::RegistrationsController < Devise::RegistrationsController
   def configure_account_update_params
     allow = [:firstname, :surname, :email, :password, :password_confirmation,
              :organisation, :description, :postcode, :full_address,
-             :website_url, :contact_name]
+             :website_url, :contact_name, :logo]
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(allow) }
   end
 
