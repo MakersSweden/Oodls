@@ -278,6 +278,10 @@ en:
       title: title
       what_mote_can_i_do: "What more can I do?"
       where_to_give: "Where to give?"
+      ideas_suggestions: "Ideas / Suggestions?"
+      coders: "Coders: want to contribute?"
+      open_source_message: "Oodls is an open-source project. If you'd like to help maintain the site"
+      fork_us: "fork us on GitHub!"
   order:
     - !ruby/symbol year
     - !ruby/symbol month

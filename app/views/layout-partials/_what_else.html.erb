@@ -1,7 +1,7 @@
 <div id="what-else-modal" class="reveal-modal" data-reveal>
   <div class="row">
   	<div class="small-12 columns">
-		  <h2>What more can I do?</h2>
+		  <h2><%= t('oodls.ui.what_mote_can_i_do') %></h2>
 		</div>
   </div>
 	<div class="row">
@@ -16,17 +16,17 @@
 	</div>
 	<div class="row">
 		<div class="small-12 columns">
-			<p>Ideas / suggestions? <%= link_to "let us know", "#", "data-reveal-id" => "contact-us-modal" %>.</p>
+			<p><%= t('oodls.ui.ideas_suggestions') %> <%= link_to t('oodls.ui.contact_us'), "#", "data-reveal-id" => "contact-us-modal" %>.</p>
 		</div>
 	</div>
 	<div class="row">
   	<div class="small-12 columns">
-			<h3>Coders: want to contribute?</h3>
+			<h3><%= t('oodls.ui.coders') %></h3>
 		</div>
 	</div>
 	<div class="row">
 		<div class="small-12 columns">
-			<p>Oodls is an open-source project. If you'd like to help maintain the site, <a href="https://github.com/Callisto13/Oodls">fork us on Github!</a></p>
+			<p><%= t('oodls.ui.open_source_message') %> <a href="https://github.com/Callisto13/Oodls"><%= t('oodls.ui.fork_us') %></a></p>
 		</div>
 	</div>
   <a class="close-reveal-modal">&#215;</a>

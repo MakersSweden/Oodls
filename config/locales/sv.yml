@@ -254,6 +254,10 @@ sv:
       comment: "kommentar"
       comments: "kommentarer"
       use_my_location: "Använd min position"
+      ideas_suggestions: "Har du en ide eller ett förslag?"
+      coders: "Utvecklare: Vill du bidra?"
+      open_source_message: "Oodls.io är ett öppen källkodprojekt. Vill du vara med och underhålla koden?"
+      fork_us: "clona koden på GitHub!"
       registrations:
         organisation_name: "Organisation"
         org_description: "Verksamhetsbeskrivning (max 140 tecken)"
