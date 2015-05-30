@@ -3,6 +3,6 @@ class Donor < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :firstname, :surname, presence: true
+  # validates :firstname, :surname, presence: true
   has_attachment :logo
 end
