@@ -56,10 +56,4 @@ class ApplicationController < ActionController::Base
   	end
   end
 
-  def set_locale
-    I18n.locale = session[:locale] || I18n.default_locale
-    session[:locale] = I18n.locale
-    redirect_to :back
-  end
-
 end
