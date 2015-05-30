@@ -85,6 +85,11 @@
               <%= link_to t('oodls.devise-ui.sign_out'), destroy_charity_session_path, method: :delete %>
             </li>
         <% end %>
+        <% if donor_signed_in? %>
+            <li>
+              <%= link_to t('oodls.devise-ui.sign_out'), destroy_donor_session_path, method: :delete %>
+            </li>
+        <% end %>
         <li><%= link_to t('oodls.ui.about'), "#", "data-reveal-id" => "about-modal" %></li>
         <li><%= link_to t('oodls.ui.contact_us'), "#", "data-reveal-id" => "contact-us-modal" %></li>
       </ul>
