@@ -56,8 +56,10 @@
         <li class="has-dropdown">
           <a href="#"><%= t('oodls.ui.i_have_food_to_give') %></a>
           <ul class="dropdown">
-            <li><%= link_to t('oodls.ui.add_donor'), new_donor_registration_path %></li>
-            <li><%= link_to t('oodls.devise-ui.sign_in'), donor_session_path %></li>
+            <% unless donor_signed_in? %>
+              <li><%= link_to t('oodls.ui.add_donor'), new_donor_registration_path %></li>
+              <li><%= link_to t('oodls.devise-ui.sign_in'), donor_session_path %></li>
+            <% end %>
             <li><%= link_to t('oodls.ui.all_donors'), donors_index_path %></li>
             <li><%= link_to t('oodls.ui.where_to_give'), charities_path %></li>
             <li><%= link_to t('oodls.ui.donations.create_a_donation'), new_donation_path %></li>
@@ -70,8 +72,8 @@
           <ul class="dropdown">
             <% unless charity_signed_in? %>
                 <li><%= link_to t('oodls.ui.add_charity'), new_charity_registration_path %></li>
+                <li><%= link_to t('oodls.devise-ui.sign_in'), new_charity_session_path %></li>
             <% end %>
-            <li><%= link_to t('oodls.devise-ui.sign_in'), new_charity_session_path %></li>
             <li><%= link_to t('oodls.ui.all_charities'), charities_path %></li>
             <% if charity_signed_in? %>
                 <li><%= link_to t('oodls.ui.my_profile'), "/charities/#{@current_charity.id}" %></li>
