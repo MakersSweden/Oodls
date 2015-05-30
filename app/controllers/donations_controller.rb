@@ -32,7 +32,7 @@ class DonationsController < ApplicationController
     else
       flash[:notice] = 'No good'
     end
-    
+
   end
 
   def donation_params

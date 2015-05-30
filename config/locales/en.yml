@@ -216,11 +216,16 @@ en:
       do_i_qualify: "Am I qualified?"
       donation_guidlines: "Donation Guidelines"
       visit_the_website: "Visit the website"
+      comment: "comment"
+      comments: "comments"
       donations:
         all_donations: "Current donations"
         create_a_donation: "Create a donation"
         from_date: "Available from"
         will_deliver: "offer delivery"
+        donation_show: "Donation: "
+        pick_up_date: "Can pick up (date): "
+        accepted: "accepted"
       filter: "filter by food type"
       food: 
         cereals: Cereals
