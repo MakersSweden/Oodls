@@ -12,14 +12,16 @@ gem 'sdoc', '~> 0.4.0' # bundle exec rake doc:rails generates the API under doc/
 
 gem 'devise'
 gem 'mustache'
-gem 'paperclip'
-gem 'aws-sdk'
+
 gem 'geocoder'
 gem 'foundation-rails', '~> 5.5.0'
 gem 'owlcarousel-rails'
 gem 'has_scope'
 
 gem 'rails-i18n', '~> 4.0.0'
+
+gem 'cloudinary'
+gem 'attachinary'
 
 group :test do
 	gem 'rspec-rails'

@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150530045519) do
+ActiveRecord::Schema.define(version: 20150530075944) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attachinary_files", force: true do |t|
+    t.integer  "attachinariable_id"
+    t.string   "attachinariable_type"
+    t.string   "scope"
+    t.string   "public_id"
+    t.string   "version"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "format"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "attachinary_files", ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent", using: :btree
 
   create_table "charities", force: true do |t|
     t.string   "email",                  default: "",  null: false
@@ -33,10 +49,6 @@ ActiveRecord::Schema.define(version: 20150530045519) do
     t.text     "organisation"
     t.text     "contact_name"
     t.text     "full_address"
-    t.string   "logo_file_name"
-    t.string   "logo_content_type"
-    t.integer  "logo_file_size"
-    t.datetime "logo_updated_at"
     t.text     "description"
     t.string   "dried_goods"
     t.string   "snacks"
@@ -58,19 +70,6 @@ ActiveRecord::Schema.define(version: 20150530045519) do
 
   add_index "charities", ["email"], name: "index_charities_on_email", unique: true, using: :btree
   add_index "charities", ["reset_password_token"], name: "index_charities_on_reset_password_token", unique: true, using: :btree
-
-  create_table "donation_claims", force: true do |t|
-    t.integer  "charity_id"
-    t.integer  "donation_id"
-    t.text     "comment"
-    t.date     "pick_up_date"
-    t.boolean  "accepted"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "donation_claims", ["charity_id"], name: "index_donation_claims_on_charity_id", using: :btree
-  add_index "donation_claims", ["donation_id"], name: "index_donation_claims_on_donation_id", using: :btree
 
   create_table "donations", force: true do |t|
     t.integer  "donor_id"
