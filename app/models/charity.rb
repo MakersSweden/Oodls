@@ -3,7 +3,6 @@ class Charity < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # :default_url => "/images/oodls-placeholder.svg"
   validates_presence_of :organisation, :postcode, :full_address
 
   geocoded_by :address

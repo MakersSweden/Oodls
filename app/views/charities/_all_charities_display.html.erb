@@ -3,7 +3,11 @@
     <div class="small-12 medium-6 large-3 columns">
       <div class="row charity-image">
         <div class="small-12 columns">
-          <%= link_to (cl_image_tag charity.logo.path, { width: 200, height: 200, crop: :thumb} ), "/charities/#{charity.id}" %>
+          <% if charity.logo? %>
+            <%= link_to (cl_image_tag (charity.logo.present? ? charity.logo.path : '/images/oodls-placeholder.svg'), { width: 200, height: 200, crop: :thumb} ), "/charities/#{charity.id}" %>
+          <% else %>
+            <%= image_tag '/images/oodls-placeholder.svg', { width: 200, height: 200} %>
+          <% end %>
         </div>
       </div>
       <div class="small-12 columns">
