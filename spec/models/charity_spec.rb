@@ -1,9 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Charity, type: :model do
-  require 'rails_helper'
-
-
   describe 'Associations' do
     it { is_expected.to have_many(:donors).through :donation_claims }
     it { is_expected.to have_many :donation_claims }
@@ -20,6 +17,5 @@ RSpec.describe Charity, type: :model do
     it { is_expected.to have_db_column :created_at }
     it { is_expected.to have_db_column :updated_at }
   end
-
 
 end
