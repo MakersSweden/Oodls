@@ -3,16 +3,12 @@ class Charity < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_attached_file :logo,
-    :styles => { :thumb => "200x200" },
-    :default_url => "/images/oodls-placeholder.svg"
-
-	validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
-
   validates_presence_of :organisation, :postcode, :full_address
 
   geocoded_by :address
   after_validation :geocode
+
+  has_attachment :logo
 
   scope :cereals, -> value { where(cereals: value) }
   scope :coffee_and_tea, -> value { where(coffee_and_tea: value) }

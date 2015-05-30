@@ -17,8 +17,14 @@
 //= require foundation
 //= require owl.carousel
 //= require checkboxes
+//= require jquery.ui.widget
+//= require jquery.iframe-transport
+//= require jquery.fileupload
+//= require cloudinary/jquery.cloudinary
+//= require attachinary
 //= require_tree .
 
 $(function() {
   $(document).foundation();
+  $('.attachinary-input').attachinary();
 });
