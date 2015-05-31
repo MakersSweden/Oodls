@@ -1,12 +1,13 @@
 <div class="row">
   <% if donor_signed_in? && @current_donor.id == @donor.id %>
       <div class="columns small-6">
-        <h2><%= t('oodls.ui.my_profile') %> <%= @donor.organisation %></h2>
+        <h4><%= t('oodls.ui.my_profile') %> </h4><br/>
+        <h2><%= @donor.organisation %></h2>
       </div>
       <div class="columns small-6 text-right">
         <%= link_to [t('oodls.ui.back_to'), t('oodls.ui.all_donors')].join(' '), donors_index_path, class: 'button small' %>
         <%= link_to [t('oodls.ui.edit'), t('oodls.ui.profile')].join(' '), edit_donor_registration_path(@donor), class: 'button small' %>
-        <%= link_to [t('oodls.ui.delete'), t('oodls.ui.profile')].join(' '), registration_path(@donor), data: { confirm: t('oodls.ui.confirmation')}, method: :delete, class: 'button alert small' %>
+        <%= link_to [t('oodls.ui.delete'), t('oodls.ui.profile')].join(' '), registration_path(@donor), data: {confirm: t('oodls.ui.confirmation')}, method: :delete, class: 'button alert small' %>
       </div>
   <% else %>
       <div class="columns small-6">

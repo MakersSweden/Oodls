@@ -1,10 +1,18 @@
 class DonorsController < ApplicationController
   def index
     @donors = Donor.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @donors }
+    end
   end
 
   def show
     @donor = Donor.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @donor }
+    end
   end
 
   def update
