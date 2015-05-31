@@ -14,14 +14,14 @@
     </div>
     <% if @charity.website_url %>
         <div class="row">
-          <%= link_to t('oodls.ui.visit_the_website'), @charity.website_url %>
+          <%= link_to t('oodls.ui.visit_the_website'), @charity.website_url, target: '_blank' %>
         </div>
     <% end %>
     <div class="row">
       <h3><%= t('oodls.ui.registrations.org_contact_header') %></h3>
       <ul class="no-bullet">
         <li><%= @charity.contact_name %></li>
-        <li><a href="mailto:<%= @charity.email %>">Email Us</a></li>
+        <li><a href="mailto:<%= @charity.email %>"><%= t('oodls.ui.email_us') %></a></li>
         <li><%= @charity.full_address %></li>
         <li><%= @charity.postcode %></li>
       </ul>

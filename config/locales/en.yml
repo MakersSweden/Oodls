@@ -219,6 +219,7 @@ en:
       back: "back"
       back_to: "Back to"
       contact_us: "Contact us"
+      email_us: "Email us"
       decelect_select_all: "Select / Deselect all"
       description: description
       do_i_qualify: "Am I qualified?"
@@ -241,6 +242,7 @@ en:
         pick_up_date: "Can pick up (date): "
         accepted: "accepted"
         claim_donation: "We are interested"
+        not_accepting_donations: "We are currently not accepting donations"
       splash:
         message_1: "We throw away 7 million tonnes of food and drink from our homes every year"
         message_2: "We throw away more food from our homes than packaging"

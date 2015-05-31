@@ -38,10 +38,10 @@
     <div class="small-12 medium-6 large-3 columns">
       <div class="row">
         <div class="small-12 columns">
-          <h3>Contact info:</h3>
+          <h3><%= t('oodls.ui.registrations.org_contact_header') %></h3>
           <ul class="no-bullet">
             <li><%= charity.contact_name %></li>
-            <li><a href="mailto:<%= charity.email %>">Email Us</a></li>
+            <li><a href="mailto:<%= charity.email %>"><%= t('oodls.ui.email_us') %></a></li>
             <li><%= charity.full_address %></li>
             <li><%= charity.postcode %></li>
           </ul>
@@ -49,7 +49,7 @@
       </div>
       <div class="row">
         <div class="small-12 columns">
-          <h3>Opening hours:</h3>
+          <h3><%= t('oodls.ui.operations.opening_hours') %></h3>
           <p><strong>Weekdays:</strong> <%= charity.weekday_opening_hours %></p>
           <p><strong>Weekends:</strong> <%= charity.weekend_opening_hours %></p>
         </div>
@@ -58,10 +58,10 @@
     <div class="small-12 medium-6 large-3 columns">
       <div class="row">
         <div class="small-12 columns">
-          <h3>Food accepted:</h3>
+          <h3><%= t('oodls.ui.operations.food_accepted') %></h3>
           <ul class="no-bullet">
             <% if charity.requirements_array.empty? %>
-              <li>We are currently not accepting donations</li>
+              <li><%= t('oodls.ui.donations.not_accepting_donations') %></li>
             <% else %>
               <% charity.requirements_array.each do |key, value| %>
               <li>

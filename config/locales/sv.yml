@@ -242,6 +242,7 @@ sv:
       my_profile: "Min profil"
       about: "Om Oodls"
       contact_us: "Kontakta oss"
+      email_us: "Skicka e-mail"
       decelect_select_all: "Markera / Avmarkera alla"
       back: "tillbaka"
       search: "sök"
@@ -307,6 +308,7 @@ sv:
         pick_up_date: "Kan hämta (datum): "
         accepted: "accepterad"
         claim_donation: "Intresseanmälan"
+        not_accepting_donations: "Vi tar för närvarande inte emot donationer"
       splash:
         message_1: "Vi slänger 7 miljoner ton mat och dryck från våra hem varje år"
         message_2: "Vi slänger mer mat från våra hem än förpackningar"

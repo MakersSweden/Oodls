@@ -1,7 +1,7 @@
 <div class="row">
   <% if donor_signed_in? && @current_donor.id == @donor.id %>
       <div class="columns small-6">
-        <h2><%= t('oodls.ui.my_profile') %></h2>
+        <h2><%= t('oodls.ui.my_profile') %> <%= @donor.organisation %></h2>
       </div>
       <div class="columns small-6 text-right">
         <%= link_to [t('oodls.ui.back_to'), t('oodls.ui.all_donors')].join(' '), donors_index_path, class: 'button small' %>
