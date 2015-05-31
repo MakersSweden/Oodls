@@ -90,7 +90,7 @@
             <li class="has-dropdown">
               <a href="#"><%= @current_donor.email %></a>
               <ul class="dropdown">
-                <li><%= link_to t('oodls.ui.my_profile'), "/charities/#{@current_donor.id}" %></li>
+                <li><%= link_to t('oodls.ui.my_profile'), "/donors/#{@current_donor.id}" %></li>
                 <li><%= link_to t('oodls.devise-ui.sign_out'), destroy_donor_session_path, method: :delete %></li>
               </ul>
             </li>

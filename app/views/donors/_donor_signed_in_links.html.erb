@@ -1,0 +1,19 @@
+<div class="row">
+  <% if donor_signed_in? && @current_donor.id == @donor.id %>
+      <div class="columns small-6">
+        <h2><%= t('oodls.ui.my_profile') %></h2>
+      </div>
+      <div class="columns small-6 text-right">
+        <%= link_to "Back to all donors", donors_index_path, class: "button small" %>
+        <%= link_to "Edit Profile", edit_donor_registration_path(@donor), class: "button small" %>
+        <%= link_to "Remove Charity", registration_path(@donor), data: { confirm: "Are you sure?" }, method: :delete, class: "button alert small" %>
+      </div>
+  <% else %>
+      <div class="columns small-6">
+        <h2><%= @donor.organisation %></h2>
+      </div>
+      <div class="columns small-6 text-right">
+        <%= link_to "Back to all donors", donors_index_path, class: "button small" %>
+      </div>
+  <% end %>
+</div>

@@ -14,14 +14,22 @@ class CharitiesController < ApplicationController
 
   def index
     if params[:search]
-      @charities = Charity.search(params[:search]).order("organisation ASC")
+      @charities = Charity.search(params[:search]).order('organisation ASC')
     else
-      @charities = apply_scopes(Charity).all.order("organisation ASC")
+      @charities = apply_scopes(Charity).all.order('organisation ASC')
     end
   end
 
   def show
     @charity = Charity.find(params[:id])
+  end
+
+  def update
+    if params[:charity][:password].blank? && params[:user][:password_confirmation].blank?
+      params[:charity].delete(:password)
+      params[:charity].delete(:password_confirmation)
+      super
+    end
   end
 
 end
