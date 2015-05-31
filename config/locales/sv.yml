@@ -263,6 +263,11 @@ sv:
       rating: "Betyg"
       quality: "Kvalitet"
       reliability: "Pålitlighet"
+      back_to: "Tillbaka till"
+      edit: "Redigera"
+      confirmation: "Är du säker?"
+      delete: "Radera"
+      profile: "profil"
       registrations:
         organisation_name: "Organisation"
         org_description: "Verksamhetsbeskrivning (max 140 tecken)"
@@ -279,6 +284,8 @@ sv:
         characters_minimum: "tecken (minimum)"
       operations:
         what_food_do_you_accept: "Vilken mat kan du ta emot?"
+        food_accepted: "Tar gärna emot:"
+        opening_hours: "Öppettider"
       food:
         tins: "konserver"
         dried_foods: "torrvaror"

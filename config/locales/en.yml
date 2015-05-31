@@ -215,8 +215,9 @@ en:
       add_charity: "Add a Charity"
       all_charities: "All Charities"
       all_donors: "All Donating organisations"
-      all_records: all
-      back: back
+      all_records: "all"
+      back: "back"
+      back_to: "Back to"
       contact_us: "Contact us"
       decelect_select_all: "Select / Deselect all"
       description: description
@@ -226,6 +227,10 @@ en:
       comment: "comment"
       comments: "comments"
       use_my_location: "Use my location"
+      edit: "Edit"
+      confirmation: "Are you sure?"
+      delete: "Delete"
+      profile: "Profile"
       donations:
         all_donations: "Current donations"
       donations:
@@ -260,6 +265,8 @@ en:
       my_profile: "My Profile"
       operations:
         what_food_do_you_accept: "What food dou you accept?"
+        food_accepted: "Gladly accepts:"
+        opening_hours: "Opening hours"
       registrations:
         characters_minimum: "characters minimum"
         open_for_donations: "Open for donations:"
