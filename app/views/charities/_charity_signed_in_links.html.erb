@@ -2,7 +2,7 @@
   <% if charity_signed_in? && @current_charity.id == @charity.id %>
       <div class="columns small-6">
         <h4><%= t('oodls.ui.my_profile') %></h4><br/>
-        <h2></h2><%= @charity.organisation %></h2>
+        <h2><%= @charity.organisation %></h2>
       </div>
       <div class="columns small-6 text-right">
         <%= link_to [t('oodls.ui.back_to'), t('oodls.ui.all_charities')].join(' '), charities_path, class: 'button small' %>
