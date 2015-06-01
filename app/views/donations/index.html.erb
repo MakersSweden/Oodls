@@ -7,25 +7,19 @@
 <% @donations.each do |donation| %>
     <div class="charity-listing row">
       <div class="small-12 columns">
-        <% if donation.try(:donor) %>
-            <div class="row">
-              <div class="small-12 columns">
-                <h2><%= link_to donation.donor, "/donors/#{donation.donor}" %></h2>
-              </div>
-            </div>
-        <% end %>
-        <% if donation.try(:donor).try(:website_url) %>
-            <div class="row">
-              <div class="small-12 columns">
-                <%= link_to t('oodls.ui.visit_the_website'), donation.donor.website_url %>
-              </div>
-            </div>
-        <% end %>
+
         <div class="row">
           <div class="small-12 columns">
             <h3><%= donation.title %></h3>
           </div>
         </div>
+        <% if donation.try(:donor) %>
+            <div class="row">
+              <div class="small-12 columns">
+                <h4><%= link_to donation.donor.organisation, "/donors/#{donation.donor}" %></h4>
+              </div>
+            </div>
+        <% end %>
         <div class="row">
           <div class="small-12 columns">
             <%= donation.description %>

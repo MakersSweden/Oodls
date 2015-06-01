@@ -8,7 +8,7 @@
     <%= t('oodls.ui.registrations.organisation_name') %>
   </div>
   <div class="small-8 columns">
-    <%= @donation.donor ? @donation.donor : 'Not set' %>
+    <%= @donation.donor ? @donation.donor.organisation : 'Not set' %>
   </div>
 </div>
 
@@ -45,7 +45,7 @@
         <%= t('oodls.ui.registrations.org_person') %>
       </div>
       <div class="small-8 columns">
-        <%= @donation.donor.contact_neme ? @donation.donor.contact_neme : 'Not set' %>
+        <%= @donation.donor.contact_name ? @donation.donor.contact_name : 'Not set' %>
       </div>
     </div>
 <% end %>

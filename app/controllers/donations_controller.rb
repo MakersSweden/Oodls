@@ -1,10 +1,13 @@
 class DonationsController < ApplicationController
   def new
-    @donation = Donation.new
+    #@donation = Donation.new
+    binding.pry
+    @donation = @current_donor.donations.new
   end
 
   def create
-    @donation = Donation.create(donation_params)
+    #@donation = Donation.create(donation_params)
+    @donation = @current_donor.donations.create(donation_params)
     if @donation.save
       redirect_to donations_path
     else

@@ -234,7 +234,6 @@ en:
       profile: "Profile"
       donations:
         all_donations: "Current donations"
-      donations:
         create_a_donation: "Create a donation"
         from_date: "Available from"
         will_deliver: "offer delivery"
