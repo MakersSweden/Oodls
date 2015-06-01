@@ -84,7 +84,7 @@
         </li>
         <% if charity_signed_in? %>
             <li class="has-dropdown">
-              <a href="#"><%= @current_charity.email %></a>
+              <a href="#"><%= @current_charity.name %></a>
               <ul class="dropdown">
                 <li><%= link_to t('oodls.ui.my_profile'), "/charities/#{@current_charity.id}" %></li>
                 <li><%= link_to t('oodls.devise-ui.sign_out'), destroy_charity_session_path, method: :delete %></li>
@@ -92,7 +92,7 @@
             </li>
         <% elsif donor_signed_in? %>
             <li class="has-dropdown">
-              <a href="#"><%= @current_donor.email %></a>
+              <a href="#"><%= @current_donor.organisation %></a>
               <ul class="dropdown">
                 <li><%= link_to t('oodls.ui.my_profile'), "/donors/#{@current_donor.id}" %></li>
                 <li><%= link_to t('oodls.devise-ui.sign_out'), destroy_donor_session_path, method: :delete %></li>
