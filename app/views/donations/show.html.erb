@@ -1,6 +1,9 @@
 <div class="row">
-  <div class="small-12 columns">
+  <div class="small-8 columns">
     <h2><%= [t('oodls.ui.donations.donation_show'), @donation.title].join(' ') %></h2>
+  </div>
+  <div class="small-4 columns">
+    <%= link_to [t('oodls.ui.back_to'), t('oodls.ui.donations.all_donations')].join(' '), donations_path, class: 'button small' %>
   </div>
 </div>
 <div class="row">
@@ -39,7 +42,6 @@
 </div>
 
 <% if @donation.donor %>
-    <hr/>
     <div class="row">
       <div class="small-4 columns">
         <%= t('oodls.ui.registrations.org_person') %>
@@ -51,7 +53,6 @@
 <% end %>
 
 <% unless @donation_claims.blank? %>
-    <hr/>
     <div class="row">
       <div class="small-12 columns">
         <h3> <%= t('oodls.ui.donations.claim_donation') %></h3>
@@ -68,8 +69,15 @@
         <% end %>
       </div>
     </div>
+<% else %>
+    <div class="row">
+      <div class="small-12 columns">
+        <hr/>
+        <h3><%= t('oodls.ui.donations.no_claims') %></h3>
+      </div>
+    </div>
 <% end %>
-
+<br/>
 <% if current_charity.present? %>
     <div class="row">
       <div class="small-12 columns">
@@ -80,7 +88,7 @@
     <div class="row">
       <div class="small-12 columns">
         <h3><%= t('oodls.ui.donations.register_to_claim') %>  </h3>
-        <%= link_to t('oodls.ui.add_charity'), new_charity_registration_path,class: 'small button' %>
+        <%= link_to t('oodls.ui.add_charity'), new_charity_registration_path, class: 'small button' %>
       </div>
     </div>
 <% end %>
