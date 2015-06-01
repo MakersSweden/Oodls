@@ -54,14 +54,16 @@
 
 <% unless @donation_claims.blank? %>
     <div class="row">
-      <div class="small-12 columns">
-        <h3> <%= t('oodls.ui.donations.claim_donation') %></h3>
+      <br/>
+      <div class="small-12 large-8 columns">
+        <h2> <%= t('oodls.ui.donations.claim_donation') %></h2>
         <% @donation_claims.each do |claim| %>
-            <div>
-              <strong><%= [t('oodls.ui.registrations.organisation_name'), claim.charity.organisation].join(': ') %></strong>
-              <br/>
-
+            <div class="panel">
+              <h3><%= claim.charity.organisation %></h3>
+              <small><%= [t('oodls.ui.created'), localize(claim.created_at, format: :long)].join(' ') %></small>
               <p><%= claim.comment %></p>
+
+              <p><%= [t('oodls.ui.donations.pick_up_date'), claim.pick_up_date].join(' ') %></p>
               <% if current_charity == claim.charity %>
                   <p><%= link_to 'Delete', donation_donation_claim_path(claim.donation.id, claim.id), method: :delete, data: {confirm: 'Are you sure?'} %></p>
               <% end %>

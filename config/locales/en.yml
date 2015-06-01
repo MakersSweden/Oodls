@@ -219,6 +219,7 @@ en:
       back: "back"
       back_to: "Back to"
       contact_us: "Contact us"
+      details: "details"
       email_us: "Email us"
       decelect_select_all: "Select / Deselect all"
       description: description
@@ -227,6 +228,7 @@ en:
       visit_the_website: "Visit the website"
       comment: "comment"
       comments: "comments"
+      created: "Created:"
       use_my_location: "Use my location"
       edit: "Edit"
       confirmation: "Are you sure?"

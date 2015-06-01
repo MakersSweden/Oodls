@@ -254,6 +254,7 @@ sv:
       description: "beskrivning"
       visit_the_website: "Besök hemsidan"
       details: "detaljer"
+      created: "Skapad:"
       comment: "kommentar"
       comments: "kommentarer"
       use_my_location: "Använd min position"

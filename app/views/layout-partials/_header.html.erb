@@ -51,6 +51,23 @@
         <li>
           <%= link_to_unless I18n.locale == :sv, 'SV', set_language_swedish_path %>
         </li>
+        <% if charity_signed_in? %>
+            <li class="has-dropdown">
+              <a href="#"><%= @current_charity.organisation %></a>
+              <ul class="dropdown">
+                <li><%= link_to t('oodls.ui.my_profile'), "/charities/#{@current_charity.id}" %></li>
+                <li><%= link_to t('oodls.devise-ui.sign_out'), destroy_charity_session_path, method: :delete %></li>
+              </ul>
+            </li>
+        <% elsif donor_signed_in? %>
+            <li class="has-dropdown">
+              <a href="#"><%= @current_donor.organisation %></a>
+              <ul class="dropdown">
+                <li><%= link_to t('oodls.ui.my_profile'), "/donors/#{@current_donor.id}" %></li>
+                <li><%= link_to t('oodls.devise-ui.sign_out'), destroy_donor_session_path, method: :delete %></li>
+              </ul>
+            </li>
+        <% end %>
       </ul>
       <ul class="right">
         <li class="has-dropdown">
@@ -82,23 +99,6 @@
             <li><%= link_to t('oodls.ui.do_i_qualify'), "#", "data-reveal-id" => "qualifications-modal" %></li>
           </ul>
         </li>
-        <% if charity_signed_in? %>
-            <li class="has-dropdown">
-              <a href="#"><%= @current_charity.organisation %></a>
-              <ul class="dropdown">
-                <li><%= link_to t('oodls.ui.my_profile'), "/charities/#{@current_charity.id}" %></li>
-                <li><%= link_to t('oodls.devise-ui.sign_out'), destroy_charity_session_path, method: :delete %></li>
-              </ul>
-            </li>
-        <% elsif donor_signed_in? %>
-            <li class="has-dropdown">
-              <a href="#"><%= @current_donor.organisation %></a>
-              <ul class="dropdown">
-                <li><%= link_to t('oodls.ui.my_profile'), "/donors/#{@current_donor.id}" %></li>
-                <li><%= link_to t('oodls.devise-ui.sign_out'), destroy_donor_session_path, method: :delete %></li>
-              </ul>
-            </li>
-        <% end %>
         <li><%= link_to t('oodls.ui.about'), "#", "data-reveal-id" => "about-modal" %></li>
         <li><%= link_to t('oodls.ui.contact_us'), "#", "data-reveal-id" => "contact-us-modal" %></li>
       </ul>
