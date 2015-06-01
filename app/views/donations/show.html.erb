@@ -50,28 +50,38 @@
     </div>
 <% end %>
 
-<hr/>
-<div class="row">
-  <div class="small-12 columns">
-    <h3> <%= t('oodls.ui.donations.claim_donation') %></h3>
-    <% @donation_claims.each do |claim| %>
-        <div>
-          <strong><%= claim.charity.organisation %></strong>
-          <br />
-          <p><%= claim.comment %></p>
-          <% if current_charity == claim.charity %>
-            <p><%= link_to 'Delete', donation_donation_claim_path(claim.donation.id, claim.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-          <% end %>
-        </div>
-    <% end %>
-  </div>
-</div>
+<% unless @donation_claims.blank? %>
+    <hr/>
+    <div class="row">
+      <div class="small-12 columns">
+        <h3> <%= t('oodls.ui.donations.claim_donation') %></h3>
+        <% @donation_claims.each do |claim| %>
+            <div>
+              <strong><%= [t('oodls.ui.registrations.organisation_name'), claim.charity.organisation].join(': ') %></strong>
+              <br/>
+
+              <p><%= claim.comment %></p>
+              <% if current_charity == claim.charity %>
+                  <p><%= link_to 'Delete', donation_donation_claim_path(claim.donation.id, claim.id), method: :delete, data: {confirm: 'Are you sure?'} %></p>
+              <% end %>
+            </div>
+        <% end %>
+      </div>
+    </div>
+<% end %>
 
 <% if current_charity.present? %>
-  <div class="row">
-    <div class="small-12 columns">
-      <%= render 'donation_claims/form' %>
+    <div class="row">
+      <div class="small-12 columns">
+        <%= render 'donation_claims/form' %>
+      </div>
     </div>
-  </div>
+<% elsif !current_donor.present? %>
+    <div class="row">
+      <div class="small-12 columns">
+        <h3>Register your charity to claim donation</h3>
+        <%= link_to t('oodls.ui.add_charity'), new_charity_registration_path,class: 'small button' %>
+      </div>
+    </div>
 <% end %>
 
