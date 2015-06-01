@@ -64,9 +64,9 @@
               <li><%= t('oodls.ui.donations.not_accepting_donations') %></li>
             <% else %>
               <% charity.requirements_array.each do |key, value| %>
-              <li>
-                <%= link_to image_tag("icons/#{key[:heading]}.svg", class: "large-icon"), controller: "charities", "#{key[:heading]}" => "1" %><%= link_to "#{key[:label]}", controller: "charities", "#{key[:heading]}" => "1" %>
-              </li>
+
+                <%= link_to image_tag("icons/#{key[:heading]}.svg", class: "medium-icon"), controller: "charities", "#{key[:heading]}" => "1" %><%#= link_to "#{key[:label]}", controller: "charities", "#{key[:heading]}" => "1" %>
+
               <% end %>
             <% end %>
           </ul>

@@ -300,7 +300,7 @@ sv:
         characters_minimum: "tecken (minimum)"
       operations:
         what_food_do_you_accept: "Vilken mat kan du ta emot?"
-        food_accepted: "Tar gärna emot:"
+        food_accepted: "Tar gärna emot"
         opening_hours: "Öppettider"
       food:
         tins: "konserver"

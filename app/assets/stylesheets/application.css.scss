@@ -179,10 +179,15 @@ FOOD ICONS
 
 @media only screen and (min-width: 64.063em) {
   .small-icon {
-    width: 8%;
+    width: 6%;
   }
   .large-icon {
     width: 45px;
+  }
+  .medium-icon {
+    width: 13%;
+    height: auto;
+    transition: 1s all ease;
   }
 }
 
