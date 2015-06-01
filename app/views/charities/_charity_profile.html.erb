@@ -37,7 +37,7 @@
       <h3><%= t('oodls.ui.operations.food_accepted') %></h3>
       <ul class="no-bullet">
         <% if @charity.requirements_array.empty? %>
-            <li>We are currently not accepting donations</li>
+            <li><%= t('oodls.ui.donations.not_accepting_donations') %></li>
         <% else %>
             <% @charity.requirements_array.each do |key, value| %>
                 <li><%= image_tag "icons/#{key[:heading]}.svg", size: "40x40" %><%= key[:label] %></li>

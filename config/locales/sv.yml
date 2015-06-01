@@ -20,6 +20,20 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 sv:
+  activerecord:
+    attributes:
+      charity:
+       tins: "konserver"
+       dried_foods: "torrvaror"
+       coffee_tea: "kaffe och thé"
+       fruit_veg: "frukt och grönt"
+       meet_fish: "kött och fisk"
+       snacks: "snacks"
+       cereals: "müsli och flingor"
+       condiments: "kryddor"
+       cooking_ingreadients: "matlagningstillbehör"
+       drinks: "drycker"
+       milk: "mjölk"
   elements:
     email: "Mailadress"
     phone: "Telefonnummer"
