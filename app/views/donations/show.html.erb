@@ -79,7 +79,7 @@
 <% elsif !current_donor.present? %>
     <div class="row">
       <div class="small-12 columns">
-        <h3>Register your charity to claim donation</h3>
+        <h3><%= t('oodls.ui.donations.register_to_claim') %>  </h3>
         <%= link_to t('oodls.ui.add_charity'), new_charity_registration_path,class: 'small button' %>
       </div>
     </div>
