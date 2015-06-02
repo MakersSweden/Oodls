@@ -280,12 +280,13 @@ en:
         org_donation_center_address: "Donation Center Address"
         org_logo: "Charity logo"
         org_person: "Contact Name"
-        org_person_email: "Contact\\'s Email Address"
+        org_person_email: "Contact's Email Address"
         org_url: "Website Address"
         organisation_name: "Organisation Name"
         email: "Email"
         password: Password
         password_cofirm: "Password Confirmation"
+      rating: "Rating"
       seach_charities: "Search for organisations"
       search: Search
       submit: Create

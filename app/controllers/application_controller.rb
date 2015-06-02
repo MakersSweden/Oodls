@@ -17,6 +17,10 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  alias_method :current_user, :current_charity
+  alias_method :user_signed_in?, :charity_signed_in?
+  helper_method :current_user, :user_signed_in?
+
   protected
 
   def configure_permitted_parameters
