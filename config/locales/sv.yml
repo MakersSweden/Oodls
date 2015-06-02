@@ -315,6 +315,8 @@ sv:
         drinks: "drycker"
         milk: "mjölk"
       donations:
+        donation: "Donation"
+        donations: "Donationer"
         all_donations: "Aktuella donationer"
         create_a_donation: "Skapa en donation"
         from_date: "Aktuell from"
@@ -326,6 +328,8 @@ sv:
         not_accepting_donations: "Vi tar för närvarande inte emot donationer"
         register_to_claim: "Registrera din organisation för att lämna en intresseanmälan."
         no_claims: "Ingen har lämnat någon intresseanmälan ännu."
+        claimed_by: "Efterfrågad av:"
+        delivered_to: "Levererad till:"
       splash:
         message_1: "Vi slänger 7 miljoner ton mat och dryck från våra hem varje år"
         message_2: "Vi slänger mer mat från våra hem än förpackningar"

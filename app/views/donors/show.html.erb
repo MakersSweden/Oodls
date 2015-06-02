@@ -3,9 +3,9 @@
   <div class="small-12 medium-6 large-3 columns">
     <div class="row">
       <% if @donor.logo? %>
-          <%= cl_image_tag @donor.logo.path, { width: 200, height: 200, crop: :thumb} %>
+          <%= cl_image_tag @donor.logo.path, {width: 200, height: 200, crop: :thumb} %>
       <% else %>
-          <%= image_tag '/images/oodls-placeholder.svg', { width: 200, height: 200} %>
+          <%= image_tag '/images/oodls-placeholder.svg', {width: 200, height: 200} %>
       <% end %>
     </div>
   </div>
@@ -34,3 +34,19 @@
     <%= render 'rating', donor: @donor %>
   </div>
 </div>
+<% if @donor.donations %>
+    <div class="row">
+      <div class="small-12 columns panel">
+        <h3><%= t('oodls.ui.donations.donations') %></h3>
+        <% @donor.donations.each do |donation| %>
+            <h5><%= donation.title %></h5>
+            <small><%= [t('oodls.ui.created'), localize(donation.created_at, format: :long)].join(' ') %></small>
+            <p><%= donation.description %></p>
+            <small> <%= [t('oodls.ui.donations.claimed_by'), claimed_by(donation)].join(' ') %></small>
+            <small> <%= [t('oodls.ui.donations.delivered_to'), delivered_to(donation)].join(' ') %></small>
+
+            <hr/>
+        <% end %>
+      </div>
+    </div>
+<% end %>

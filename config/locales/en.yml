@@ -237,6 +237,8 @@ en:
       quality: "Quality"
       reliability: "Reliability"
       donations:
+        donation: "Donation"
+        donations: "Donations"
         all_donations: "Current donations"
         create_a_donation: "Create a donation"
         from_date: "Available from"
@@ -248,6 +250,8 @@ en:
         not_accepting_donations: "We are currently not accepting donations"
         register_to_claim: "Register your charity to claim this donation."
         no_claims: "No donation claims yet."
+        claimed_by: "Claimend by:"
+        delivered_to: "Delivered to:"
       splash:
         message_1: "We throw away 7 million tonnes of food and drink from our homes every year"
         message_2: "We throw away more food from our homes than packaging"
