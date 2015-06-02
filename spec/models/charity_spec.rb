@@ -4,6 +4,7 @@ RSpec.describe Charity, type: :model do
   describe 'Associations' do
     it { is_expected.to have_many(:donors).through :donation_claims }
     it { is_expected.to have_many :donation_claims }
+    it { is_expected.to have_many :comments }
   end
 
   describe 'Database schema' do

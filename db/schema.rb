@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150530141251) do
+ActiveRecord::Schema.define(version: 20150602132521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,15 @@ ActiveRecord::Schema.define(version: 20150530141251) do
   add_index "charities", ["email"], name: "index_charities_on_email", unique: true, using: :btree
   add_index "charities", ["reset_password_token"], name: "index_charities_on_reset_password_token", unique: true, using: :btree
 
+  create_table "comments", force: true do |t|
+    t.string   "body"
+    t.integer  "charity_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["charity_id"], name: "index_comments_on_charity_id", using: :btree
+
   create_table "donation_claims", force: true do |t|
     t.integer  "charity_id"
     t.integer  "donation_id"
@@ -104,6 +113,17 @@ ActiveRecord::Schema.define(version: 20150530141251) do
   end
 
   add_index "donations", ["donor_id"], name: "index_donations_on_donor_id", using: :btree
+
+  create_table "donor_comments", force: true do |t|
+    t.integer  "charity_id"
+    t.integer  "donor_id"
+    t.string   "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "donor_comments", ["charity_id"], name: "index_donor_comments_on_charity_id", using: :btree
+  add_index "donor_comments", ["donor_id"], name: "index_donor_comments_on_donor_id", using: :btree
 
   create_table "donors", force: true do |t|
     t.string   "email",                  default: "", null: false
