@@ -234,6 +234,8 @@ en:
       confirmation: "Are you sure?"
       delete: "Delete"
       profile: "Profile"
+      quality: "Quality"
+      reliability: "Reliability"
       donations:
         all_donations: "Current donations"
         create_a_donation: "Create a donation"
