@@ -1,7 +1,9 @@
 class Charity < ActiveRecord::Base
   ratyrate_rater
   has_many :donation_claims
+  has_many :donor_comments
   has_many :donors, through: :donation_claims
+  has_many :donors, through: :donor_comments
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
