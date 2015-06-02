@@ -1,36 +1,31 @@
-<% if @donor.donor_comments %>
-  <div class="row">
-    <h3><%= t('oodls.ui.comments') %></h3>
-  </div>
+<section style="margin-left: 20px; margin-right: 20px;">
+  <% if @donor.donor_comments %>
+      <% @donor.donor_comments.each do |comment| %>
+          <div class="row donor_comments">
+            <div class="small-12 columns">
+              <p>
+                <strong><%= comment.charity.organisation %></strong>
+                (<em><%= time_ago_in_words comment.created_at %></em>):
+              </p>
 
-  <% @donor.donor_comments.each do |comment| %>
-    <div class="row donor_comments">
-      <div class="small-2 columns">
-        <% if comment.charity.logo? %>
-          <%= link_to (cl_image_tag comment.charity.logo.path), "/charities/#{comment.charity.id}" %>
-        <% else %>
-          <%= link_to (image_tag '/images/oodls-placeholder.svg'), "/charities/#{comment.charity.id}" %>
-        <% end %>
-      </div>
-      <div class="small-10 columns">
-        <p>
-          <strong><%= comment.charity.organisation %></strong>
-          (<em><%= time_ago_in_words comment.created_at %></em>):
-        </p>
-        <p><%= comment.body %></p>
-      </div>
-    </div>
+              <p><%= comment.body %></p>
+            </div>
+          </div>
+      <% end %>
   <% end %>
-<% end %>
 
-<%= form_for([@donor, @donor.donor_comments.build]) do |f| %>
-  <div class="row">
-    <p><%= t('oodls.ui.comment').humanize %> &#42;</p>
-    <%= f.text_area :body, placeholder: t('oodls.ui.comment').humanize %>
-  </div>
-  <div class="row">
-    <div class="actions">
-      <%= f.submit t('oodls.ui.submit'), class: 'small button' %>
-    </div>
-  </div>
-<% end %>
+  <%= form_for([@donor, @donor.donor_comments.build]) do |f| %>
+      <div class="row">
+        <div class="small-12 columns">
+          <p><%= t('oodls.ui.comment').humanize %> &#42;</p>
+          <%= f.text_area :body, placeholder: t('oodls.ui.comment').humanize %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 columns actions">
+          <%= f.submit t('oodls.ui.submit'), class: 'small button' %>
+        </div>
+      </div>
+  <% end %>
+</section>
+

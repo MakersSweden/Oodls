@@ -1,0 +1,16 @@
+<section style="margin-left: 20px; margin-right: 20px;">
+  <% if @donor.donations %>
+      <div class="row">
+        <div class="small-12 columns ">
+          <% @donor.donations.each do |donation| %>
+              <h5><%= donation.title %></h5>
+              <small><%= [t('oodls.ui.created'), localize(donation.created_at, format: :long)].join(' ') %></small>
+              <p><%= donation.description %></p>
+              <small> <%= [t('oodls.ui.donations.claimed_by'), claimed_by(donation)].join(' ') %></small>
+              <small> <%= [t('oodls.ui.donations.delivered_to'), delivered_to(donation)].join(' ') %></small>
+              <hr/>
+          <% end %>
+        </div>
+      </div>
+  <% end %>
+</section>

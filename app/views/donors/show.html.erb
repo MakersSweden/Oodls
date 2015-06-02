@@ -35,21 +35,23 @@
   </div>
   <hr>
 </div>
-<% if @donor.donations %>
-  <div class="row">
-    <div class="small-12 columns panel">
-      <h3><%= t('oodls.ui.donations.donations') %></h3>
-      <% @donor.donations.each do |donation| %>
-        <h5><%= donation.title %></h5>
-        <small><%= [t('oodls.ui.created'), localize(donation.created_at, format: :long)].join(' ') %></small>
-        <p><%= donation.description %></p>
-        <small> <%= [t('oodls.ui.donations.claimed_by'), claimed_by(donation)].join(' ') %></small>
-        <small> <%= [t('oodls.ui.donations.delivered_to'), delivered_to(donation)].join(' ') %></small>
-
-        <hr/>
-      <% end %>
+<div class="row">
+  <div class="small-12 columns">
+    <ul class="tabs" data-tab role="tablist" style="border: 1px solid #ccc;margin-bottom: 1.3rem;">
+      <li class="tab-title active" role="presentational" ><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1"><%= t('oodls.ui.donations.donations') %></a></li>
+      <li class="tab-title" role="presentational" ><a href="#panel2-2" role="tab" tabindex="0"aria-selected="false" controls="panel2-2"><%= t('oodls.ui.comments').humanize %></a></li>
+    </ul>
+    <div class="tabs-content" style="border: 1px solid #ccc;margin-bottom: 1.3rem;">
+      <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+        <%= render 'donor_donations' %>
+      </section>
+      <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+        <%= render 'charities_comments' %>
+      </section>
     </div>
   </div>
-<% end %>
+</div>
 
-<%= render 'charities_comments' %>
+
+
+
