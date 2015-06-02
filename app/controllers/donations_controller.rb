@@ -1,7 +1,5 @@
 class DonationsController < ApplicationController
   def new
-    #@donation = Donation.new
-    binding.pry
     @donation = @current_donor.donations.new
   end
 
