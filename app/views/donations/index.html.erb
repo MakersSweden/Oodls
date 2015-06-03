@@ -4,42 +4,50 @@
   </div>
 </div>
 
-<% @donations.each do |donation| %>
-    <div class="charity-listing row">
-      <div class="small-12 columns">
+<div class="row">
+  <div class="small-12 columns">
 
-        <div class="row">
-          <div class="small-12 columns">
-            <h3><%= donation.title %></h3>
-          </div>
-        </div>
-        <% if donation.try(:donor) %>
+    <ul class="small-block-grid-3">
+      <% @donations.each do |donation| %>
+          <li><!-- Your content goes here -->
+
             <div class="row">
               <div class="small-12 columns">
-                <h4><%= link_to donation.donor.organisation, "/donors/#{donation.donor}" %></h4>
+                <h3><%= donation.title %></h3>
               </div>
             </div>
-        <% end %>
-        <div class="row">
-          <div class="small-12 columns">
-            <%= donation.description %>
-          </div>
-        </div>
-        <div class="row">
-          <div class="small-12 columns">
-            <%= [t('oodls.ui.donations.from_date').humanize, donation.from_date].join(': ') %>
-          </div>
-        </div>
-        <div class="row">
-          <div class="small-12 columns">
-            <p><%= [t('oodls.ui.donations.will_deliver').humanize, donation.will_deliver].join(': ') %></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="small-12 columns">
-            <p><%= link_to t('oodls.ui.details').humanize, donation_path(donation) %></p>
-          </div>
-        </div>
-      </div>
-    </div>
-<% end %>
+            <% if donation.try(:donor) %>
+                <div class="row">
+                  <div class="small-12 columns">
+                    <h4><%= link_to donation.donor.organisation, "/donors/#{donation.donor}" %></h4>
+                  </div>
+                </div>
+            <% end %>
+            <div class="row">
+              <div class="small-12 columns">
+                <%= donation.description %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 columns">
+               <small><%= [t('oodls.ui.donations.from_date').humanize, donation.from_date].join(': ') %></small>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 columns">
+                <small><%= [t('oodls.ui.donations.will_deliver').humanize, donation.will_deliver].join(': ') %></small>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 columns">
+                <p><%= link_to t('oodls.ui.details').humanize, donation_path(donation) %></p>
+              </div>
+            </div>
+
+
+          </li>
+      <% end %>
+
+    </ul>
+  </div>
+</div>
