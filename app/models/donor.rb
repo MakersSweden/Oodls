@@ -8,5 +8,7 @@ class Donor < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # validates :firstname, :surname, presence: true
+  geocoded_by :address
+  after_validation :geocode
   has_attachment :logo
 end
