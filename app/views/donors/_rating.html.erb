@@ -3,12 +3,12 @@
     <h3><%= t('oodls.ui.rating').humanize %></h3>
     <div class="row">
       <div class="small-12 columns">
-        <%= t('oodls.ui.quality') %>  <%= rating_for donor, 'quality', cancel: true %>
+        <%= t('oodls.ui.quality') %>  <%= rating_for donor, 'quality', cancel: true, readonly: !charity_signed_in? %>
       </div>
     </div>
     <div class="row">
       <div class="small-12  columns">
-        <%= t('oodls.ui.reliability') %>  <%= rating_for donor, 'reliability', cancel: true %>
+        <%= t('oodls.ui.reliability') %>  <%= rating_for donor, 'reliability', cancel: true, readonly: !charity_signed_in? %>
       </div>
     </div>
   </div>
