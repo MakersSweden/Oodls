@@ -1,5 +1,5 @@
 <section style="margin-left: 20px; margin-right: 20px;">
-  <% if @donor.donor_comments %>
+  <% if @donor.donor_comments.any? %>
       <% @donor.donor_comments.each do |comment| %>
           <div class="row donor_comments">
             <div class="small-12 columns">
