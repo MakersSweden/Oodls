@@ -35,31 +35,34 @@
   </div>
   <hr>
 </div>
-<div class="row">
-  <div class="small-12 columns">
-    <ul class="tabs" data-tab role="tablist" style="border: 1px solid #ccc;margin-bottom: 1.3rem;">
-      <li class="tab-title active" role="presentational">
-        <a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1"><%= t('oodls.ui.comments').humanize %></a>
-      </li>
-      <% if @donor.donations.any? %>
-          <li class="tab-title" role="presentational">
-            <a href="#panel2-2" role="tab" tabindex="0" aria-selected="false" controls="panel2-2"><%= t('oodls.ui.donations.donations') %></a>
+
+<% if @donor.donations.any? || charity_signed_in? %>
+  <div class="row">
+    <div class="small-12 columns">
+      <ul class="tabs" data-tab role="tablist" style="border: 1px solid #ccc;margin-bottom: 1.3rem;">
+        <% if charity_signed_in? %>
+          <li class="tab-title active" role="presentational">
+            <a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1"><%= t('oodls.ui.comments').humanize %></a>
           </li>
-      <% end %>
-    </ul>
-    <div class="tabs-content" style="border: 1px solid #ccc;margin-bottom: 1.3rem;">
-      <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
-        <%= render 'charities_comments' %>
-      </section>
-      <% if @donor.donations.any? %>
-          <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
-            <%= render 'donor_donations' %>
+        <% end %>
+        <% if @donor.donations.any? %>
+            <li class="tab-title" role="presentational">
+              <a href="#panel2-2" role="tab" tabindex="0" aria-selected="false" controls="panel2-2"><%= t('oodls.ui.donations.donations') %></a>
+            </li>
+        <% end %>
+      </ul>
+      <div class="tabs-content" style="border: 1px solid #ccc;margin-bottom: 1.3rem;">
+        <% if charity_signed_in? %>
+          <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+            <%= render 'charities_comments' %>
           </section>
-      <% end %>
+        <% end %>
+        <% if @donor.donations.any? %>
+            <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+              <%= render 'donor_donations' %>
+            </section>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
-
-
-
-
+<% end %>
