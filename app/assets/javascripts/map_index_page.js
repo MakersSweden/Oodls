@@ -96,6 +96,7 @@ var addTescoMarkers = function (tesco_info) {
     $.getJSON('data/tescolonglat.json', function (json) {
         for (var i in json) {
             map.addMarker({
+                category: 'partner',
                 lat: json[i][0],
                 lng: json[i][1],
                 icon: markerImage('images/tesco-pin.svg', 30, 48, 0, 0, 15, 48),
@@ -111,7 +112,7 @@ var addTescoMarkers = function (tesco_info) {
 };
 
 var addChurchMarkers = function (lat, lng) {
-    var url = "http://api.svenskakyrkan.se/platser/v3/place?nearby=" + lng + "," + lat + "&nearbyRadius=50000&is=church&apikey=6e0b08cf-e05b-4ffb-80bb-6c04f619117a"
+    var url = "http://api.svenskakyrkan.se/platser/v3/place?nearby=" + lng + "," + lat + "&nearbyRadius=50000&is=church&apikey=6e0b08cf-e05b-4ffb-80bb-6c04f619117a";
     $.getJSON(url, function (json) {
         for (var index = 0; index < json["Results"].length; index++) {
             var i = json["Results"][index];
@@ -124,6 +125,7 @@ var addChurchMarkers = function (lat, lng) {
             }];
             var donor_info = fillPartnerInfoWindow(0, donor_data);
             map.addMarker({
+                category: 'partner',
                 lat: i.Geolocation.Coordinates[1],
                 lng: i.Geolocation.Coordinates[0],
                 icon: markerImage('images/church-pin.svg', 30, 48, 0, 0, 15, 48),
@@ -137,7 +139,6 @@ var addChurchMarkers = function (lat, lng) {
         }
     });
 };
-
 
 var getCharityData = function () {
     var charity_data = $('.charity_data_class').data('charities-for-map');
@@ -157,6 +158,7 @@ var processCharityRequirements = function (i, charity_data) {
 
 var addCharityMarkers = function (i, charity_data, charity_info) {
     map.addMarker({
+        category: 'charity',
         lat: charity_data[i].lat,
         lng: charity_data[i].lon,
         icon: markerImage('images/oodls-pin.svg', 30, 48, 0, 0, 15, 48),
@@ -171,6 +173,7 @@ var addCharityMarkers = function (i, charity_data, charity_info) {
 
 var addDonorMarkers = function (i, donor_data, donor_info) {
     map.addMarker({
+        category: 'donor',
         lat: donor_data[i].lat,
         lng: donor_data[i].lon,
         icon: markerImage('images/oodls-pin-2.svg', 30, 48, 0, 0, 15, 48),
@@ -342,5 +345,20 @@ var assembleMap = function (postcode) {
                 postcodeError();
             }
         }
+    });
+};
+
+var toggleMarkerVisibility;
+toggleMarkerVisibility = function (type) {
+    map.markers.filter(function (obj) {
+        if (obj.category == type) {
+            console.log(obj.visible);
+            if (obj.visible == true)
+                obj.setVisible(false);
+            else
+                obj.setVisible(true)
+        }
+        ;
+
     });
 };

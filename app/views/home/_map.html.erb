@@ -1,6 +1,17 @@
 <div class="row">
   <div id="map"></div>
 </div>
+<div class="row">
+  <div class="small-4 columns">
+    <div id="map_filter">
+      <form action="#">
+        <input type="checkbox" checked="checked" id="partners" onclick="toggleMarkerVisibility('partner');" /><label>Partners</label><br />
+        <input type="checkbox" checked="checked" id="donors" onclick="toggleMarkerVisibility('donor');" /><label>Donors</label><br />
+        <input type="checkbox" checked="checked" id="charities" onclick="toggleMarkerVisibility('charity')" /><label>Charities</label>
+      </form>
+    </div>
+  </div>
+</div>
 <div class="search-box row">
   <div class="small-12 columns small-centered">
     <div class="row small-collapse medium-uncollapse">
