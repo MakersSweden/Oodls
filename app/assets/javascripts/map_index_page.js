@@ -37,7 +37,8 @@ var generateMap = function (latitude, longitude) {
         div: '#map',
         lat: latitude,
         lng: longitude,
-        zoom: 13,
+        zoom: 12,
+        zoomControl: true,
         disableDefaultUI: true
     });
 };
