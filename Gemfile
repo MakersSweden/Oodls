@@ -23,6 +23,8 @@ gem 'rails-i18n', '~> 4.0.0'
 gem 'cloudinary'
 gem 'attachinary'
 gem 'ratyrate'
+gem 'nokogiri'
+gem 'httparty'
 
 group :test do
 	gem 'rspec-rails'

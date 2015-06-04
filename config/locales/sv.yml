@@ -39,6 +39,7 @@ sv:
     phone: "Telefonnummer"
     address: "Adress"
     postcode: "Postnummer"
+    city: "Stad"
   date:
     weekdays: "veckodagar"
     weekends: "helger"
