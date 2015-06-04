@@ -15,7 +15,6 @@ class ResRobot
     api_module = 'Search.json'
     api_version = '2.1'
     api_coord_sys = 'WGS84'
-
     "#{api_url}#{api_module}?key=#{api_key}&from=#{sanitize(from.full_address)}&to=#{sanitize(to.full_address)}&fromX=#{from.longitude}&fromY=#{from.latitude}&toX=#{to.longitude}&toY=#{to.latitude}&coordSys=#{api_coord_sys}&apiVersion=#{api_version}"
   end
 

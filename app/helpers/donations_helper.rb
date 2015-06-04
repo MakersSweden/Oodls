@@ -8,21 +8,22 @@ module DonationsHelper
     html << '<h3>Res med kollektivtrafik</h3>'
     route.each_with_index do |segment, i|
       html << content_tag(:div, class: 'small-8 columns') do
-        concat content_tag(:strong, "Rutt #{i+1}, restid: #{calculate_time(route, i).to_i} minuter.")
+        concat content_tag(:h5, "Rutt #{i+1}, restid: #{calculate_time(route, i).to_i} minuter.")
       end
+      html << '<div class="panel">'
       segment['segment'].each do |segment_part|
         html << content_tag(:div, class: 'row') do
           concat content_tag(:div, build_segment_part(segment_part).html_safe, class: 'small-12 columns')
         end
       end
+      html << '</div>'
     end
     html << '</div>'
     return html.html_safe
   end
 
   def build_segment_part(segment_part)
-    part = '<p>'
-    part << localize(segment_part['departure']['datetime'].to_datetime, format: :hours)
+    part = localize(segment_part['departure']['datetime'].to_datetime, format: :hours)
     part << " #{segment_part['departure']['location']['name']}"
     part << " (#{segment_part['segmentid']['mot']['#text']} "
     if segment_part['segmentid']['distance']
@@ -31,7 +32,6 @@ module DonationsHelper
       part << " #{segment_part['segmentid']['carrier']['number']} riktning: #{segment_part['direction']}) -> "
     end
     part << [segment_part['arrival']['location']['name'], localize(segment_part['arrival']['datetime'].to_datetime, format: :hours)].join(' ')
-    part << '</p>'
   end
 
   def calculate_time(route, i)
