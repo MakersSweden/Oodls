@@ -11,4 +11,15 @@ class Donor < ActiveRecord::Base
   geocoded_by :full_address
   after_validation :geocode
   has_attachment :logo
+
+  def self.format_for_map
+    Donor.all.map do |donor|
+      {lat: donor.latitude,
+       lon: donor.longitude,
+       organisation: donor.organisation,
+       description: donor.description,
+       id: donor.id}
+    end.to_json
+  end
+
 end

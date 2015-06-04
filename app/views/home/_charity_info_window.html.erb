@@ -23,7 +23,7 @@
 
       <div class="row">
         <div class="small-12 columns">
-          <b>Weekend opening hours:</b>
+          <b><%= t('date.weekends').humanize %></b>
         </div>
       </div>
       <div class="row">
@@ -36,7 +36,7 @@
 
       <div class="row">
         <div class="small-12 columns" style="margin-bottom: 3px;">
-          <b>Weekday Opening Hours:</b>
+          <b><%= t('date.weekdays').humanize  %></b>
         </div>
       </div>
       <div class="row">
@@ -49,7 +49,7 @@
 
     <div class="row" style="margin-top: 10px; margin-bottom: 4px;">
       <div class="small-12 columns">
-        <b>Foods We Accept:</b>
+        <b><%= t('oodls.ui.operations.food_accepted') %></b>
       </div>
     </div>
     <div class="row">
@@ -62,14 +62,14 @@
 
     <div class="row" style="margin-bottom: -15px;">
       <div class="small-12 columns">
-        <a href="/charities/{{ id }}">Learn More About Donating Here</a></p>
+        <a href="/charities/{{ id }}"><%= t('oodls.ui.details').humanize %></a></p>
       </div>
     </div>
   </div>
 
 </template>
 
-<%= content_tag :div, class: "charity_data_class", data: {charities_for_map: @charities_for_map} do %>
+<%= content_tag :div, class: 'charity_data_class', data: {charities_for_map: @charities_for_map} do %>
 <% end %>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js'></script>
