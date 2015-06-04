@@ -55,6 +55,7 @@
 <% unless @donation_claims.blank? %>
     <div class="row">
       <br/>
+
       <div class="small-12 large-8 columns">
         <h2> <%= t('oodls.ui.donations.claim_donation') %></h2>
         <% @donation_claims.each do |claim| %>
@@ -91,6 +92,13 @@
       <div class="small-12 columns">
         <h3><%= t('oodls.ui.donations.register_to_claim') %>  </h3>
         <%= link_to t('oodls.ui.add_charity'), new_charity_registration_path, class: 'small button' %>
+      </div>
+    </div>
+<% end %>
+<% if I18n.locale == :sv %>
+    <div class="row">
+      <div class="small-12 columns">
+        <%= directions_info(current_charity, @donation.donor) %>
       </div>
     </div>
 <% end %>

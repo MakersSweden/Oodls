@@ -1,3 +1,5 @@
+require 'uri'
+
 class ResRobot
 
   def get_traffic_info(from, to)
@@ -22,7 +24,8 @@ class ResRobot
   end
 
   def sanitize(string)
-    string.gsub(' ', '+')
+    #string.gsub(' ', '+')
+    URI.encode(string)
   end
 
 end
