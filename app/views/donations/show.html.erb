@@ -95,7 +95,7 @@
       </div>
     </div>
 <% end %>
-<% if I18n.locale == :sv %>
+<% if I18n.locale == :sv && current_charity.present? %>
     <div class="row">
       <div class="small-12 columns">
         <%= directions_info(current_charity, @donation.donor) %>
