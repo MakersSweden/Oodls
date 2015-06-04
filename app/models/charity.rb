@@ -10,8 +10,17 @@ class Charity < ActiveRecord::Base
 
   validates_presence_of :organisation, :postcode, :full_address
 
-  geocoded_by :address
-  after_validation :geocode
+  geocoded_by :full_address
+  reverse_geocoded_by :latitude, :longitude do |obj, results|
+    if geo = results.first
+      obj.address = geo.street_address unless obj.address?
+      obj.city = geo.city unless obj.city?
+      obj.postcode = geo.postal_code unless obj.postcode?
+      obj.country = geo.country
+    end
+  end
+  after_validation :geocode, :reverse_geocode
+  before_save :verify_charity
 
   has_attachment :logo
 
@@ -27,8 +36,8 @@ class Charity < ActiveRecord::Base
   scope :tins, -> value { where(tins: value) }
   scope :uht_milk, -> value { where(uht_milk: value) }
 
-  def address
-    [full_address, postcode].compact.join(', ')
+  def full_address
+    [address, city, postcode].compact.join(', ')
   end
 
   def requirements_array
@@ -39,6 +48,13 @@ class Charity < ActiveRecord::Base
         memo << { :label => col.humanize, :heading => col }
       end
       memo
+    end
+  end
+
+  def verify_charity
+    if city == "Göteborg" or city == "Gothenburg"
+      verified_charity = Scrapers::GoteborgCharities.search(organisation).present?
+      self.verified = verified_charity
     end
   end
 

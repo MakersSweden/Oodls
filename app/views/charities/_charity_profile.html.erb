@@ -7,6 +7,11 @@
           <%= image_tag '/images/oodls-placeholder.svg', {width: 200, height: 200} %>
       <% end %>
     </div>
+    <div class="row">
+      <% if @charity.verified %>
+        <%= image_tag verified_logo_for(@charity), { width: 200 } %>
+      <% end %>
+    </div>
   </div>
   <div class="small-12 medium-6 large-6 columns">
     <div class="row">
@@ -22,7 +27,8 @@
       <ul class="no-bullet">
         <li><%= @charity.contact_name %></li>
         <li><a href="mailto:<%= @charity.email %>"><%= t('oodls.ui.email_us') %></a></li>
-        <li><%= @charity.full_address %></li>
+        <li><%= @charity.address %></li>
+        <li><%= [@charity.city, @charity.country].compact.join(", ") %></li>
         <li><%= @charity.postcode %></li>
       </ul>
     </div>

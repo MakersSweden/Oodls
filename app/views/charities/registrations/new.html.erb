@@ -63,7 +63,15 @@
       <p><%= t('elements.address') %> &#42;</p>
     </div>
     <div class="small-8 columns">
-      <%= f.text_field :full_address, placeholder: t('oodls.ui.registrations.org_donation_center_address') %>
+      <%= f.text_field :address, placeholder: t('oodls.ui.registrations.org_donation_center_address') %>
+    </div>
+  </div>
+  <div class ="row">
+    <div class="small-4 columns">
+      <p><%= t('elements.city') %> &#42;</p>
+    </div>
+    <div class="small-8 columns">
+      <%= f.text_field :full_address, placeholder: t('elements.city') %>
     </div>
   </div>
   <div class ="row">

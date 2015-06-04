@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150603150312) do
+ActiveRecord::Schema.define(version: 20150604050558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20150603150312) do
     t.text     "postcode"
     t.text     "organisation"
     t.text     "contact_name"
-    t.text     "full_address"
+    t.text     "address"
     t.text     "description"
     t.string   "dried_goods"
     t.string   "snacks"
@@ -75,6 +75,9 @@ ActiveRecord::Schema.define(version: 20150603150312) do
     t.float    "longitude"
     t.text     "weekend_opening_hours"
     t.text     "weekday_opening_hours"
+    t.string   "city"
+    t.string   "country"
+    t.boolean  "verified"
   end
 
   add_index "charities", ["email"], name: "index_charities_on_email", unique: true, using: :btree
