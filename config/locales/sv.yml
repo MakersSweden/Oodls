@@ -346,6 +346,7 @@ sv:
       sign_in: "Logga in"
       sign_out: "Logga ut"
       sign_up: "Registrera dig"
+      update: "Uppdatera"
       forgot_password: "Har du glömt ditt lösenord?"
       remember_me: "Kom ihåg mig"
       organisation:

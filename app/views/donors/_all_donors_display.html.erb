@@ -37,7 +37,8 @@
             <ul class="no-bullet">
               <li><%= donor.contact_name %></li>
               <li><a href="mailto:<%= donor.email %>"><%= t('oodls.ui.contact_us') %></a></li>
-              <li><%= donor.full_address %></li>
+              <li><%= donor.address %></li>
+              <li><%= [donor.city, donor.country].compact.join(", ") %></li>
               <li><%= donor.postcode %></li>
             </ul>
           </div>

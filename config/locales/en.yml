@@ -202,6 +202,7 @@ en:
       sign_in: "Sign In"
       sign_out: "Sign Out"
       sign_up: "Sign Up"
+      update: "Update"
       organisation:
         sign_up: "Register your charity"
       donor:
