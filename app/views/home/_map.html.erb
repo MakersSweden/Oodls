@@ -3,13 +3,12 @@
 </div>
 <div class="row">
   <div class="small-4 columns">
-    <div id="map_filter">
-      <form action="#">
-        <input type="checkbox" checked="checked" id="partners" onclick="toggleMarkerVisibility('partner');" /><label>Partners</label><br />
-        <input type="checkbox" checked="checked" id="donors" onclick="toggleMarkerVisibility('donor');" /><label>Donors</label><br />
-        <input type="checkbox" checked="checked" id="charities" onclick="toggleMarkerVisibility('charity')" /><label>Charities</label>
-      </form>
-    </div>
+    <form action="#">
+      <input type="checkbox" checked="checked" id="partners" onclick="toggleMarkerVisibility('partner');"/><label><%= t('oodls.ui.partners') %></label><br/>
+      <input type="checkbox" checked="checked" id="donors" onclick="toggleMarkerVisibility('donor');"/><label><%= t('oodls.ui.donors') %></label><br/>
+      <input type="checkbox" checked="checked" id="charities" onclick="toggleMarkerVisibility('charity')"/><label><%= t('oodls.ui.charities') %></label>
+    </form>
+
   </div>
 </div>
 <div class="search-box row">
@@ -24,7 +23,7 @@
             <div class="small-3 medium-2 columns">
               <input type="submit" class="button postfix">
             </div>
-        </div>
+          </div>
         </form>
       </div>
       <div class="small-2 columns">

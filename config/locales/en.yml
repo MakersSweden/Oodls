@@ -211,6 +211,9 @@ en:
       about: "Oolds siktar in sig på att vara en del av lösningen av matslöseriet i samhället."
       contact: "Vill du komma i kontakt med oss gör du det enklast på: info@oodls.io"
     ui:
+      donors: "Donors"
+      charities: "Charities"
+      partners: "Partners"
       about: "About Oodls"
       add_donor: "Register as Donor"
       add_charity: "Add a Charity"

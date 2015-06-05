@@ -245,6 +245,9 @@ sv:
       about: "Oolds siktar in sig på att vara en del av lösningen av matslöseriet i samhället."
       contact: "Vill du komma i kontakt med oss gör du det enklast på: info@oodls.io"
     ui:
+      donors: "Donatorer"
+      charities: "Mottagare"
+      partners: "Samarbetspartners"
       i_have_food_to_give: "Jag har mat att skänka"
       i_am_a_charity: "Jag vill ta emot mat"
       where_to_give: "Var kan jag ge?"
