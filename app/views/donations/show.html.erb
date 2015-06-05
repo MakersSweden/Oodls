@@ -68,7 +68,20 @@
               <% if current_charity == claim.charity %>
                   <p><%= link_to 'Delete', donation_donation_claim_path(claim.donation.id, claim.id), method: :delete, data: {confirm: 'Are you sure?'} %></p>
               <% end %>
+              <% if donor_signed_in? && current_donor == @donation.donor %>
+                  <div class="row">
+                    <div class="small-12 columns">
+                      <% if !@donation.accepted? %>
+                          <%= link_to 'Accept', accept_claim_donation_donation_claim_path(@donation, claim), method: :patch %>
+                      <% else %>
+                          <%= link_to 'Unaccept', unaccept_claim_donation_donation_claim_path(@donation, claim), method: :patch %>
+                      <% end %>
+                    </div>
+                  </div>
+
+              <% end %>
             </div>
+
         <% end %>
       </div>
     </div>
@@ -81,20 +94,23 @@
     </div>
 <% end %>
 <br/>
-<% if current_charity.present? %>
-    <div class="row">
-      <div class="small-12 columns">
-        <%= render 'donation_claims/form' %>
-      </div>
-    </div>
-<% elsif !current_donor.present? %>
-    <div class="row">
-      <div class="small-12 columns">
-        <h3><%= t('oodls.ui.donations.register_to_claim') %>  </h3>
-        <%= link_to t('oodls.ui.add_charity'), new_charity_registration_path, class: 'small button' %>
-      </div>
-    </div>
+<% unless @donation.accepted? %>
+    <% if current_charity.present? %>
+        <div class="row">
+          <div class="small-12 columns">
+            <%= render 'donation_claims/form' %>
+          </div>
+        </div>
+    <% elsif !current_donor.present? %>
+        <div class="row">
+          <div class="small-12 columns">
+            <h3><%= t('oodls.ui.donations.register_to_claim') %>  </h3>
+            <%= link_to t('oodls.ui.add_charity'), new_charity_registration_path, class: 'small button' %>
+          </div>
+        </div>
+    <% end %>
 <% end %>
+
 <% if I18n.locale == :sv && current_charity.present? %>
     <div class="row">
       <div class="small-12 columns">

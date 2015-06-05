@@ -18,7 +18,12 @@ Rails.application.routes.draw do
 
   resources :charities
   resources :donations do
-    resources :donation_claims, only: [:create, :destroy]
+    resources :donation_claims, only: [:create, :destroy] do
+      member do
+        patch :accept_claim
+        patch :unaccept_claim
+      end
+    end
   end
   resources :donors do
     resources :donor_comments, only: [:create]

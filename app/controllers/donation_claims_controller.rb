@@ -12,6 +12,18 @@ class DonationClaimsController < ApplicationController
     end
   end
 
+  def accept_claim
+    @donation_claim = DonationClaim.find(params[:id])
+    @donation_claim.update_attribute(:accepted, true)
+    redirect_to donation_path(params[:donation_id])
+  end
+
+  def unaccept_claim
+    @donation_claim = DonationClaim.find(params[:id])
+    @donation_claim.update_attribute(:accepted, false)
+    redirect_to donation_path(params[:donation_id])
+  end
+
   def destroy
     @donation_claim = DonationClaim.find(params[:id])
     @donation_claim.destroy!
