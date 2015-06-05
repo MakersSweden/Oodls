@@ -5,15 +5,16 @@
         <%= link_to image_tag('/images/oodls-logo.svg'), root_path %>
       </li>
 
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span><%= t('oodls.ui.menu') %></span></a></li>
     </ul>
     <section class="top-bar-section">
       <ul class="left">
         <li>
-          <%= link_to_unless I18n.locale == :en, 'EN', set_language_english_path %>
-        </li>
-        <li>
-          <%= link_to_unless I18n.locale == :sv, 'SV', set_language_swedish_path %>
+          <% if I18n.locale == :sv %>
+              <%= link_to 'EN', set_language_english_path %>
+          <% else %>
+              <%= link_to 'SV', set_language_swedish_path %>
+          <% end %>
         </li>
         <% if charity_signed_in? %>
             <li class="has-dropdown">

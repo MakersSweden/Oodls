@@ -290,6 +290,7 @@ sv:
       delete: "Radera"
       profile: "profil"
       enter_location: "Skriv in din stad..."
+      menu: "Meny"
       registrations:
         organisation_name: "Organisation"
         org_description: "Verksamhetsbeskrivning (max 140 tecken)"
