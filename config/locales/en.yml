@@ -240,6 +240,7 @@ en:
       profile: "Profile"
       quality: "Quality"
       reliability: "Reliability"
+      enter_location: "Please enter your city..."
       donations:
         donation: "Donation"
         donations: "Donations"
