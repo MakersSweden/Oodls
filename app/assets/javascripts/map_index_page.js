@@ -353,7 +353,6 @@ var toggleMarkerVisibility;
 toggleMarkerVisibility = function (type) {
     map.markers.filter(function (obj) {
         if (obj.category == type) {
-            console.log(obj.visible);
             if (obj.visible == true)
                 obj.setVisible(false);
             else

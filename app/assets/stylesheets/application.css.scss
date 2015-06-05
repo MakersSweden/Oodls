@@ -175,6 +175,10 @@ FOOD ICONS
     height: auto;
     transition: 1s all ease;
   }
+  .status-icon {
+    width: 5%;
+    height: auto;
+  }
 }
 
 @media only screen and (min-width: 64.063em) {
@@ -188,6 +192,10 @@ FOOD ICONS
     width: 13%;
     height: auto;
     transition: 1s all ease;
+  }
+  .status-icon {
+    width: 20px;
+    height: auto;
   }
 }
 

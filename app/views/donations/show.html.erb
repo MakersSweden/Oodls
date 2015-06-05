@@ -37,7 +37,7 @@
     <%= t('oodls.ui.donations.will_deliver').humanize %>
   </div>
   <div class="small-8 columns">
-    <%= @donation.will_deliver %>
+    <%= image_tag(status_image(@donation.will_deliver), class: 'status-icon') %>
   </div>
 </div>
 

@@ -1,6 +1,6 @@
 module ApplicationHelper
-  def display_status(status)
-    status ? image('true.png') : image('false.png')
+  def status_image(status)
+    status ? image('true.svg') : image('false.svg')
   end
 
   private
