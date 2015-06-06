@@ -24,6 +24,12 @@ class DonationsController < ApplicationController
     @donation = Donation.find(params[:id])
     @donation_claims = @donation.donation_claims.all
     @donation_claim = @donation.donation_claims.build
+
+    if params[:current_location]
+      @from = OpenStruct.new(full_address: params[:address], latitude: params[:latitude], longitude: params[:longitude])
+    else
+      @from = current_charity
+    end
   end
 
   private

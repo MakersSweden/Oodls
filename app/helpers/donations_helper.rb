@@ -4,21 +4,20 @@ module DonationsHelper
   def directions_info(from, to)
     route = ResRobot.new.get_traffic_info(from, to)
     html = ''
-    html << '<div class="row">'
-    html << '<h3>Res med kollektivtrafik</h3>'
-    route.each_with_index do |segment, i|
+    route.each_with_index do |segments, i|
+      segments = segments['segment'].is_a?(Array) ? segments['segment'] : [segments['segment']]
+
       html << content_tag(:div, class: 'small-8 columns') do
-        concat content_tag(:h5, "Rutt #{i+1}, avgång om: #{calculate_departure(route, i).to_i} minuter, restid: #{calculate_time(route, i).to_i} minuter.")
+        concat content_tag(:h5, "Rutt #{i+1}, avgång om: #{calculate_departure(segments).to_i} minuter, restid: #{calculate_time(segments).to_i} minuter.")
       end
       html << '<div class="panel">'
-      segment['segment'].each do |segment_part|
+      segments.each do |segment_part|
         html << content_tag(:div, class: 'row') do
           concat content_tag(:div, build_segment_part(segment_part).html_safe, class: 'small-12 columns')
         end
       end
       html << '</div>'
     end
-    html << '</div>'
     return html.html_safe
   end
 
@@ -34,16 +33,15 @@ module DonationsHelper
     part << [segment_part['arrival']['location']['name'], localize(segment_part['arrival']['datetime'].to_datetime, format: :hours)].join(' ')
   end
 
-  def calculate_time(route, i)
-    start_time = route[i]['segment'].first['departure']['datetime']
-    end_time = route[i]['segment'].last['arrival']['datetime']
+  def calculate_time(route)
+    start_time = route.first['departure']['datetime']
+    end_time = route.last['arrival']['datetime']
     (Time.parse(end_time) - Time.parse(start_time)) / 60
   end
 
-  def calculate_departure(route, i)
+  def calculate_departure(route)
     current_time = Time.now
-    departure_time = route[i]['segment'].first['departure']['datetime']
+    departure_time = route.first['departure']['datetime']
     (Time.parse(departure_time) - current_time) / 60
-
   end
 end

@@ -114,9 +114,12 @@
 <% if I18n.locale == :sv && current_charity.present? %>
     <div class="row">
       <div class="small-12 columns">
-        <%= directions_info(current_charity, @donation.donor) %>
+        <h3>Res med kollektivtrafic</h3>
+        <a href="javascript:void(0)" id="currentLocationLink">Use Current Location</a>
+        <div class="row">
+          <%= directions_info(@from, @donation.donor) %>
+        </div>
       </div>
     </div>
-
 <% end %>
 

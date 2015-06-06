@@ -8,7 +8,7 @@ class Charity < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates_presence_of :organisation, :postcode, :full_address
+  validates_presence_of :organisation, :postcode, :address
 
   geocoded_by :full_address
   reverse_geocoded_by :latitude, :longitude do |obj, results|

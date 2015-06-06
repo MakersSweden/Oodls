@@ -19,7 +19,7 @@
             <% if donation.try(:donor) %>
                 <div class="row">
                   <div class="small-12 columns">
-                    <h4><%= link_to donation.donor.organisation, "/donors/#{donation.donor}" %></h4>
+                    <h4><%= link_to donation.donor.organisation, "/donors/#{donation.donor.id}" %></h4>
                   </div>
                 </div>
             <% end %>
