@@ -26,6 +26,8 @@ gem 'ratyrate'
 gem 'nokogiri'
 gem 'httparty'
 
+gem 'api_cache'
+
 group :test do
 	gem 'rspec-rails'
 	gem 'capybara'
