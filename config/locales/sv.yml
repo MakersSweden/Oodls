@@ -338,10 +338,10 @@ sv:
         claimed_by: "Efterfrågad av:"
         delivered_to: "Levererad till:"
       splash:
-        message_1: "Vi slänger 7 miljoner ton mat och dryck från våra hem varje år"
-        message_2: "Vi slänger mer mat från våra hem än förpackningar"
-        message_3: "Mellan 2007 och 2012 kan undvikas matavfall har minskat med 21%, vilket motsvarar mer än 1 miljon ton"
-        message_4: "Ett område nästan lika stort som Wales skulle behövas för att odla all mat vi slänger varje år"
+        message_1: "I Sverige slänger vi 1,2 miljoner ton matavfall varje år, ungefär hälften av det som slängs är ätbart"
+        message_2: "Matsvinnet är den viktigaste miljöfrågan när det gäller mat, mycket viktigare än att välja ekologiskt"
+        message_3: "Matslöseriet i världen har nått monumentala nivåer. Hälften av all mat som köps i Europa och USA slängs i soporna"
+        message_4: "I Sverige uppger nio av tio personer att de slänger mat en till tre gånger i veckan"
         message_5: ""
     devise-ui:
       sign_in: "Logga in"

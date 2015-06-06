@@ -72,16 +72,14 @@
                   <div class="row">
                     <div class="small-12 columns">
                       <% if !@donation.accepted? %>
-                          <%= link_to 'Accept', accept_claim_donation_donation_claim_path(@donation, claim), method: :patch %>
+                          <%= link_to 'Accept', accept_claim_donation_donation_claim_path(@donation, claim), method: :patch, class: 'small button' %>
                       <% else %>
-                          <%= link_to 'Unaccept', unaccept_claim_donation_donation_claim_path(@donation, claim), method: :patch %>
+                          <%= link_to 'Unaccept', unaccept_claim_donation_donation_claim_path(@donation, claim), method: :patch, class: 'small button' %>
                       <% end %>
                     </div>
                   </div>
-
               <% end %>
             </div>
-
         <% end %>
       </div>
     </div>
@@ -114,8 +112,8 @@
 <% if I18n.locale == :sv && current_charity.present? %>
     <div class="row">
       <div class="small-12 columns">
-        <h3>Res med kollektivtrafic</h3>
-        <a href="javascript:void(0)" id="currentLocationLink">Use Current Location</a>
+        <h3>Res med kollektivtrafik</h3>
+        <%= link_to t('oodls.ui.use_my_location'), 'javascript:void(0', class: 'small button', id: 'currentLocationLink' %>
         <div class="row">
           <%= directions_info(@from, @donation.donor) %>
         </div>
