@@ -28,4 +28,8 @@ Rails.application.routes.draw do
   resources :donors do
     resources :donor_comments, only: [:create]
   end
+
+
+    get :eniro_validation, controller: :eniro_validation, action: :eniro_validation
+
 end
