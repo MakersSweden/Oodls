@@ -109,7 +109,7 @@
     <% end %>
 <% end %>
 
-<% if I18n.locale == :sv && current_charity.present? %>
+<% if I18n.locale == :sv && current_charity.present? && @from.present? && @donation.donor.present? %>
     <div class="row">
       <div class="small-12 columns">
         <h3>Res med kollektivtrafik</h3>
