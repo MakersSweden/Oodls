@@ -4,40 +4,40 @@
         <%= devise_error_messages! %>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-4 columns">
         <p><%= t('oodls.ui.registrations.organisation_name') %> &#42;</p>
       </div>
       <div class="small-8 columns">
-        <%= f.text_field :organisation, autofocus: true, placeholder: t('oodls.ui.registrations.organisation_name') %>
+        <%= f.text_field :organisation, id: 'organisation', autofocus: true, placeholder: t('oodls.ui.registrations.organisation_name') %>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-12 columns">
         <%= f.text_area :description, placeholder: t('oodls.ui.registrations.org_description') %>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-12 columns">
         <%= f.text_field :website_url, placeholder: t('oodls.ui.registrations.org_url') %>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-12 columns">
         <h4><%= t('oodls.ui.registrations.org_logo') %></h4>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-12 columns">
         <%= f.attachinary_file_field :logo %>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-12 columns">
         <h4><%= t('oodls.ui.registrations.org_contact_header') %></h4>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-4 columns">
         <p><%= t('oodls.ui.registrations.org_person') %></p>
       </div>
@@ -45,7 +45,7 @@
         <%= f.text_field :contact_name, placeholder: t('oodls.ui.registrations.org_person') %>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-4 columns">
         <p><%= t('elements.email') %> &#42;</p>
       </div>
@@ -53,7 +53,7 @@
         <%= f.email_field :email, placeholder: t('oodls.ui.registrations.org_person_email') %>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-4 columns">
         <p><%= t('elements.address') %> &#42;</p>
       </div>
@@ -61,7 +61,7 @@
         <%= f.text_field :address, placeholder: t('oodls.ui.registrations.org_donation_center_address') %>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-4 columns">
         <p><%= t('elements.city') %> &#42;</p>
       </div>
@@ -69,7 +69,7 @@
         <%= f.text_field :city, placeholder: t('elements.city') %>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-4 columns">
         <p><%= t('elements.postcode') %> &#42;</p>
       </div>
@@ -77,7 +77,7 @@
         <%= f.text_field :postcode, placeholder: t('elements.postcode') %>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-12 columns">
         <h4><%= t('oodls.ui.registrations.password') %></h4>
         <% if @validatable %>
@@ -85,23 +85,53 @@
         <% end %>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-12 columns">
         <%= f.password_field :password, autocomplete: "off", placeholder: t('oodls.ui.registrations.password') %>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-12 columns">
         <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: t('oodls.ui.registrations.password_cofirm') %>
       </div>
     </div>
-    <div class ="row">
+    <div class="row">
       <div class="small-12 columns">
         <% if f.object.new_record? %>
-          <%= f.submit t('oodls.devise-ui.sign_up'), class: "button small" %>
+            <%= f.submit t('oodls.devise-ui.sign_up'), class: "button small" %>
         <% else %>
-          <%= f.submit t('oodls.devise-ui.update'), class: "button small" %>
+            <%= f.submit t('oodls.devise-ui.update'), class: "button small" %>
         <% end %>
       </div>
     </div>
 <% end %>
+
+
+<script>
+
+    $(document).on('blur', '#organisation', function(e){
+        var term =  $("#organisation").val();
+        var url = 'http://localhost:3000/eniro_validation?ccode=se&term=' + term;
+        $.getJSON( url, function( data ) {
+            $("#new_donor :input").prop("disabled", true);
+            $('#resultsModal').foundation('reveal', 'open');
+            $.each(data, function() {
+                $.each(this, function(k, v) {
+                    var html = "<h2>" + v + "</h2>";
+                    console.log(html);
+                });
+
+            });
+
+        });
+    })
+</script>
+
+
+
+<div id="resultsModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h2 id="modalTitle">Choose your organisation.</h2>
+  <p class="lead">Your couch.  It is mine.</p>
+  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>

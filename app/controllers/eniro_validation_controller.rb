@@ -1,7 +1,7 @@
 class EniroValidationController < ApplicationController
  # Usage [host].eniro_validation?query=[query]&ccode=[country code se, no, dk]
   def eniro_validation
-    query = params[:query]
+    query = params[:term]
     ccode = params[:ccode]
     results = EniroApi.new(query, ccode).query.sanitize_api_response.to_json
     render json: results

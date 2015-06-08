@@ -30,6 +30,6 @@ Rails.application.routes.draw do
   end
 
 
-    get :eniro_validation, controller: :eniro_validation, action: :eniro_validation
+  get :eniro_validation, controller: :eniro_validation, action: :eniro_validation
 
 end
