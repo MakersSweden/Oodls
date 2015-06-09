@@ -1,13 +1,14 @@
 $(function() {
-  $("#donor_organisation").on('blur', function(){
-    var term =  $("#donor_organisation").val();
+  $("#new_donor #donor_organisation").on('blur', function(){
+    var term =  $("#new_donor #donor_organisation").val();
     if(term.trim() == "") return;
 
     var url = '/eniro_validation?term=' + term;
-    $('.spinner').css("opacity", "1");
-    $('#resultsModal').foundation('reveal', 'open');
+    $('#donor_organisation').addClass('loadinggif');
+    $("#organisations").find("tbody").empty();
 
     $.getJSON(url, function(data) {
+      $('#resultsModal').foundation('reveal', 'open');
       window.organisations = data;
       $.each(data, function(index) {
         $("#organisations").find("tbody")
@@ -24,12 +25,13 @@ $(function() {
                 .attr('data-org-id', index)
                 .text("Select"))))
       });
-      $('.spinner').css("opacity", "0");
+      $('#donor_organisation').removeClass('loadinggif');
 
       $("#organisations #orgSelect").on('click', function() {
         var index = parseInt($(this).data('org-id'));
         var org = window.organisations[index];
         $('#resultsModal').foundation('reveal', 'close');
+        $("#donor_organisation").val(org.companyName);
         $("#donor_address").val(org.streetName);
         $("#donor_city").val(org.city);
         $("#donor_postcode").val(org.postCode);
@@ -37,6 +39,7 @@ $(function() {
           $("#donor_website_url").val(org.website);
           $("#new_donor #donor_website_url").prop("disabled", true);
         }
+        $("#new_donor #donor_organisation").prop("disabled", true);
         $("#new_donor .location_info :input").prop("disabled", true);
       });
     });
