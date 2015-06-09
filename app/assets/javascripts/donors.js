@@ -6,6 +6,7 @@ $(function() {
     var url = '/eniro_validation?term=' + term;
     $('#donor_organisation').addClass('loadinggif');
     $("#organisations").find("tbody").empty();
+    $("#new_donor :input").prop("disabled", true);
 
     $.getJSON(url, function(data) {
       $('#resultsModal').foundation('reveal', 'open');
@@ -26,6 +27,7 @@ $(function() {
                 .text("Select"))))
       });
       $('#donor_organisation').removeClass('loadinggif');
+      $("#new_donor :input").prop("disabled", false);
 
       $("#organisations #orgSelect").on('click', function() {
         var index = parseInt($(this).data('org-id'));
