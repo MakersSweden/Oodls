@@ -39,7 +39,6 @@ $(function() {
           $("#donor_website_url").val(org.website);
           $("#new_donor #donor_website_url").prop("disabled", true);
         }
-        $("#new_donor #donor_organisation").prop("disabled", true);
         $("#new_donor .location_info :input").prop("disabled", true);
       });
     });
