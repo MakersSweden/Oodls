@@ -21,6 +21,8 @@ class ApplicationController < ActionController::Base
   alias_method :user_signed_in?, :charity_signed_in?
   helper_method :current_user, :user_signed_in?
 
+
+
   protected
 
   def configure_permitted_parameters
@@ -68,4 +70,6 @@ class ApplicationController < ActionController::Base
     I18n.locale = session[:locale] || I18n.default_locale
     session[:locale] = I18n.locale
   end
+
+
 end
