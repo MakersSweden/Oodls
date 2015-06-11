@@ -32,4 +32,6 @@ Rails.application.routes.draw do
 
   get :eniro_validation, controller: :eniro_validation, action: :eniro_validation
 
+  godmin do
+  end
 end

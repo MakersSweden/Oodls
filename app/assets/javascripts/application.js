@@ -24,6 +24,7 @@
 //= require attachinary
 //= require jquery.raty
 //= require ratyrate
+//= require godmin
 //= require_tree .
 
 $(function() {

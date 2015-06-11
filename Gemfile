@@ -28,6 +28,8 @@ gem 'httparty'
 
 gem 'api_cache'
 
+gem 'godmin' # Admin interface https://github.com/varvet/godmin
+
 group :test do
 	gem 'rspec-rails'
 	gem 'capybara'
