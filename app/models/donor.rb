@@ -2,7 +2,7 @@ class Donor < ActiveRecord::Base
   ratyrate_rateable 'quality', 'reliability'
   has_many :donations
   has_many :donor_comments
-  has_many :charities, through: :donor_comments
+  has_many :charities, through: :donations
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
